@@ -17,9 +17,9 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
         
         {/* Compact Section Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xxs font-black tracking-widest uppercase mb-5 select-none">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            ⚡ NOVO PRODUTO HARPY
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-black tracking-widest uppercase mb-5 select-none leading-none">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
+            NOVO PRODUTO HARPY
           </div>
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl leading-tight mb-4 tracking-tight">
             ASSESSORIA <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400">CLUTCH</span>

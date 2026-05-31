@@ -17,9 +17,9 @@ export default function LandingPages({ onCtaClick, onLearnMoreClick }: LandingPa
         
         {/* Compact, elegant Section Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xxs font-black tracking-widest uppercase mb-5 select-none">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-            🎯 LANDING PAGES DE ALTA CONVERSÃO
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-black tracking-widest uppercase mb-5 select-none leading-none">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse flex-shrink-0" />
+            LANDING PAGES DE ALTA CONVERSÃO
           </div>
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl leading-tight mb-4 tracking-tight">
             Landing pages que <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">vendem</span> enquanto você dorme.
