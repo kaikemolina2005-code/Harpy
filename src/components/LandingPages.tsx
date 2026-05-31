@@ -45,7 +45,7 @@ export default function LandingPages({ onCtaClick, onLearnMoreClick }: LandingPa
               </p>
               
               <p className="text-white text-base leading-relaxed">
-                A <strong className="text-blue-400">Landing Page Harpy Premium</strong> é uma página 100% sua — sem concorrência, sem distração, sem taxa. Copy escrita por especialista, carregamento ultrarrápido no mobile e checkout em 1 clique. O resultado: <strong className="text-emerald-400 font-extrabold">taxa de conversão de 8% a 15%</strong> contra os 2-4% do marketplace.
+                A <strong className="text-white font-extrabold">Landing Page Harpy Premium</strong> é uma página 100% sua — sem concorrência, sem distração, sem taxa. Copy escrita por especialista, carregamento ultrarrápido no mobile e checkout em 1 clique. O resultado: <strong className="text-white font-extrabold">taxa de conversão de 8% a 15%</strong> contra os 2-4% do marketplace.
               </p>
 
               {/* Core Feature bullet points */}

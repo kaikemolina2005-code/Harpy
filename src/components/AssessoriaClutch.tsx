@@ -46,7 +46,7 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
               </p>
               
               <p className="text-white text-base leading-relaxed">
-                A <strong className="text-emerald-400">Assessoria Global Harpy</strong> monta seu e-commerce próprio em menos de 30 dias: integrado ao seu estoque (Bling ou Tiny), com velocidade máxima no mobile e zero dependência de plataforma. <strong className="text-white">Você vende direto, retém os dados do cliente e recupera toda a margem perdida.</strong>
+                A <strong className="text-white font-extrabold">Assessoria Global Harpy</strong> monta seu e-commerce próprio em menos de 30 dias: integrado ao seu estoque (Bling ou Tiny), com velocidade máxima no mobile e zero dependência de plataforma. <strong className="text-white font-extrabold">Você vende direto, retém os dados do cliente e recupera toda a margem perdida.</strong>
               </p>
 
               {/* Core Feature bullet points */}
