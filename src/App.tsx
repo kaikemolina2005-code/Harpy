@@ -206,11 +206,13 @@ export default function App() {
           <LandingProductDetails 
             onBackToHome={() => navigateToHomeAndScroll()}
             onSelectPlan={handleSelectPlan}
+            theme={theme}
           />
         ) : (
           <AssessoriaClutchDetails 
             onBackToHome={() => navigateToHomeAndScroll()}
             onSelectPlan={handleSelectPlan}
+            theme={theme}
           />
         )}
 
