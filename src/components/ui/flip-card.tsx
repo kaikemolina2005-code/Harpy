@@ -77,24 +77,24 @@ export default function CardFlip({
             'absolute inset-0 h-full w-full',
             '[transform:rotateY(0deg)] [backface-visibility:hidden]',
             'rounded-3xl',
-            'bg-[#111111]',
-            'border border-neutral-800',
-            'shadow-2xl',
+            'bg-white/75 backdrop-blur-xl',
+            'border border-white/70',
+            'shadow-[inset_2px_2px_1px_0_rgba(255,255,255,0.9),_inset_-1px_-1px_1px_1px_rgba(255,255,255,0.5),_0_8px_40px_rgba(0,0,0,0.08)]',
             'transition-all duration-700',
             'flex flex-col overflow-hidden',
             isFlipped ? 'opacity-0' : 'opacity-100',
           )}
         >
-          {/* Top White Section */}
-          <div className="h-[35%] w-full bg-white flex items-center justify-center p-6 px-10 relative overflow-hidden">
+          {/* Top Logo Section */}
+          <div className="h-[35%] w-full bg-white/60 flex items-center justify-center p-6 px-10 relative overflow-hidden">
             <div className={cn("absolute top-0 inset-x-0 h-1", theme.bg)}></div>
             {logo && (
                <img src={logo} alt={`Logo ${title}`} className={cn("max-w-full max-h-full object-contain mix-blend-multiply", logoClassName)} />
             )}
           </div>
 
-          {/* Bottom Dark Section */}
-          <div className="flex-1 flex flex-col items-center justify-center p-8 text-center bg-[#111111]">
+          {/* Bottom Section */}
+          <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
             <div className="mb-6 stay-dark">
               {customCenterNode ? customCenterNode : (
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FF8533] to-[#CC3D00] p-[1px] shadow-[0_0_30px_rgba(255,77,0,0.25)]">
@@ -106,10 +106,10 @@ export default function CardFlip({
               )}
             </div>
             
-            <h3 className="text-2xl font-black text-white tracking-tight mb-3 stay-dark">
+            <h3 className="text-2xl font-black text-neutral-900 tracking-tight mb-3">
               {title}
             </h3>
-            <p className="text-neutral-400 text-[12px] leading-relaxed max-w-[240px] mb-8 stay-dark">
+            <p className="text-neutral-600 text-[12px] leading-relaxed max-w-[240px] mb-8">
               {description}
             </p>
 
@@ -126,10 +126,9 @@ export default function CardFlip({
             'absolute inset-0 h-full w-full',
             '[transform:rotateY(180deg)] [backface-visibility:hidden]',
             'rounded-3xl p-6 sm:p-8',
-            'bg-[#111111]',
-            'border',
-            theme.borderDark,
-            theme.shadow,
+            'bg-white/75 backdrop-blur-xl',
+            'border border-white/70',
+            'shadow-[inset_2px_2px_1px_0_rgba(255,255,255,0.9),_inset_-1px_-1px_1px_1px_rgba(255,255,255,0.5),_0_8px_40px_rgba(0,0,0,0.08)]',
             'flex flex-col',
             'transition-all duration-700',
             !isFlipped ? 'opacity-0' : 'opacity-100',
@@ -148,12 +147,12 @@ export default function CardFlip({
                     <CenterIcon className="w-4 h-4 text-white" />
                   </div>
                ) : null}
-               <h3 className="text-[22px] font-black text-white stay-dark">
+               <h3 className="text-[22px] font-black text-neutral-900">
                  {title}
                </h3>
             </div>
             
-            <p className="line-clamp-4 text-[13px] font-medium leading-relaxed text-[#A3A3A3]">
+            <p className="line-clamp-4 text-[13px] font-medium leading-relaxed text-neutral-600">
               {subtitle}
             </p>
 
@@ -166,7 +165,7 @@ export default function CardFlip({
                 return (
                   <div
                     key={index}
-                    className="flex items-center gap-3 text-sm font-bold text-[#E5E5E5] transition-all duration-500"
+                    className="flex items-center gap-3 text-sm font-bold text-neutral-800 transition-all duration-500"
                     style={{
                       transform: isFlipped
                         ? 'translateX(0)'
