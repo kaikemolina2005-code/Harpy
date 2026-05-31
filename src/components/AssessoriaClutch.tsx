@@ -31,7 +31,7 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
         </div>
 
         {/* Persuasive Sales Card Pitch */}
-        <div className="stay-dark bg-neutral-900/45 border border-white/5 hover:border-emerald-500/10 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto backdrop-blur-sm shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+        <div className="stay-dark bg-emerald-950/40 border border-emerald-400/20 hover:border-emerald-400/35 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto backdrop-blur-md shadow-[inset_2px_2px_1px_0_rgba(110,231,183,0.08),_inset_-1px_-1px_1px_1px_rgba(110,231,183,0.05),_0_15px_40px_rgba(5,40,25,0.35)]">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
             {/* Persuasive copy content */}
@@ -71,7 +71,7 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
             </div>
 
             {/* Interactive Badge and High-Conversion Stats CTA card */}
-            <div className="md:col-span-5 bg-emerald-950/10 border border-emerald-500/20 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group">
+            <div className="md:col-span-5 bg-emerald-600/25 backdrop-blur-md border border-emerald-400/40 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group shadow-[inset_2px_2px_1px_0_rgba(110,231,183,0.2),_inset_-1px_-1px_1px_1px_rgba(110,231,183,0.1),_0_8px_32px_rgba(5,150,80,0.2)]">
               <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-bl-full pointer-events-none" />
               
               <span className="text-xs font-black text-emerald-400 uppercase tracking-widest block mb-2">Padrão Ouro Tecnológico</span>
