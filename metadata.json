@@ -1,0 +1,6 @@
+{
+  "name": "Harpy Accessory",
+  "description": "Assessoria Premium e de Alto Impacto para Marketplaces (Mercado Livre, Amazon, Shopee) e E-commerce de Performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

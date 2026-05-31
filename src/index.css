@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --color-brand-red: #db2429;
+  --color-brand-blue: #1e3d95;
+}
+
+/* Custom layout utility metrics */
+.text-xxs {
+  font-size: 0.65rem;
+}
+
+.text-xxxs {
+  font-size: 0.55rem;
+}
+
+/* Custom slow spin for branding element */
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Glowing text rendering effects */
+.glow-sm {
+  text-shadow: 0 0 15px rgba(52, 211, 153, 0.4);
+}
+
+/* Custom scrolling list animations for 3D Marquee column lanes */
+@keyframes marquee-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-up {
+  animation: marquee-up 32s linear infinite;
+}
+
+.animate-marquee-down {
+  animation: marquee-down 32s linear infinite;
+}
+
+/* Shimmering bar animation */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-shimmer {
+  background-size: 200% 200%;
+  animation: shimmer 4s ease infinite;
+}
+
+/* Slide up and scale up animations */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 15px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-up {
+  animation: scale-up 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Fade-in transition */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* ==========================================
+   SYSTEM LIGHT THEME GENERAL DESIGN RULES
+   ========================================== */
+html.light {
+  color-scheme: light;
+}
+
+html.light body,
+html.light .bg-neutral-950:not(.stay-dark),
+html.light div.bg-neutral-950:not(.stay-dark),
+html.light .bg-neutral-900:not(.stay-dark) {
+  background-color: #f6f8fa !important;
+  color: #1a1e26 !important;
+}
+
+/* Light dot grid pattern */
+html.light .bg-\[radial-gradient\(\#ffffff04_1\.5px\,transparent_1\.5px\)\] {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1.5px, transparent 1.5px) !important;
+}
+
+/* Typography contrast correction */
+html.light h1:not(.stay-dark):not(.stay-dark *),
+html.light h2:not(.stay-dark):not(.stay-dark *),
+html.light h3:not(.stay-dark):not(.stay-dark *),
+html.light h5:not(.stay-dark):not(.stay-dark *),
+html.light h6:not(.stay-dark):not(.stay-dark *),
+html.light h4:not(.absolute h4):not(.stay-dark):not(.stay-dark *),
+html.light .font-display:not(.text-brand-red):not(.text-sky-500):not(.text-emerald-500):not(.text-yellow-400):not(.text-orange-500):not(.stay-dark):not(.stay-dark *),
+html.light .text-white:not(.stay-dark):not(.stay-dark *),
+html.light .text-neutral-200:not(.stay-dark):not(.stay-dark *),
+html.light .text-slate-100:not(.stay-dark):not(.stay-dark *) {
+  color: #111827 !important;
+}
+
+html.light .text-neutral-300:not(.stay-dark):not(.stay-dark *),
+html.light .text-neutral-400:not(.stay-dark):not(.stay-dark *),
+html.light .text-gray-400:not(.stay-dark):not(.stay-dark *),
+html.light .text-slate-300:not(.stay-dark):not(.stay-dark *) {
+  color: #4b5563 !important;
+}
+
+html.light .text-neutral-500,
+html.light .text-neutral-600 {
+  color: #6b7280 !important;
+}
+
+/* Trust column standard container and cards */
+html.light .testimonial-gradient-top {
+  background-image: linear-gradient(to bottom, #f6f8fa, transparent) !important;
+}
+
+html.light .testimonial-gradient-bottom {
+  background-image: linear-gradient(to top, #f6f8fa, transparent) !important;
+}
+
+html.light .bg-neutral-900\/40:not(.stay-dark),
+html.light .bg-neutral-900\/60:not(.stay-dark),
+html.light .bg-neutral-900\/80:not(.stay-dark),
+html.light .bg-neutral-950\/40:not(.stay-dark),
+html.light .bg-[#0a0a0f]:not(.stay-dark),
+html.light .bg-neutral-900\/50:not(.stay-dark),
+html.light .bg-neutral-900\/30:not(.stay-dark) {
+  background-color: #ffffff !important;
+  color: #1a1e26 !important;
+  border-color: rgba(0, 0, 0, 0.07) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 10px 40px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Accordion hover action items */
+html.light .hover\:bg-white\/\[0\.02\]:hover {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Glass background inside the floating Header - Sênior optimized */
+html.light header .max-w-6xl {
+  color: #1e293b !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+html.light .header-glass-bg {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(249, 250, 251, 0.82) 50%, rgba(243, 244, 246, 0.88) 100%) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+}
+
+html.light .header-radial-glow {
+  background: radial-gradient(ellipse at right, rgba(219,36,41,0.06) 0%, transparent 70%) !important;
+}
+
+html.light .header-inner-border {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.8), inset -0.5px -0.5px 0 0.5px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light .header-gradient-border {
+  background: linear-gradient(135deg, rgba(219,36,41,0.35) 0%, rgba(0,0,0,0.06) 25%, rgba(0,0,0,0.04) 50%, rgba(30,61,149,0.22) 100%) !important;
+}
+
+html.light header nav.hidden.md\:flex {
+  background-color: rgba(0, 0, 0, 0.035) !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light header nav button {
+  color: #000000 !important;
+  font-weight: 800;
+}
+
+html.light header nav button:hover {
+  color: #000000 !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light header nav button.text-emerald-400 {
+  color: #047857 !important;
+}
+
+html.light header nav button.text-emerald-400:hover {
+  color: #065f46 !important;
+  background-color: rgba(16, 185, 129, 0.08) !important;
+}
+
+html.light header nav button.text-blue-400 {
+  color: #1d4ed8 !important;
+}
+
+html.light header nav button.text-blue-400:hover {
+  color: #1e40af !important;
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+
+html.light header button[aria-label="Alternar tema"] {
+  background-color: rgba(0, 0, 0, 0.035) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #1e3d95 !important;
+}
+
+html.light header button[aria-label="Alternar tema"]:hover {
+  background-color: rgba(0, 0, 0, 0.075) !important;
+}
+
+html.light header .font-bold.text-xxs {
+  color: #111827 !important;
+}
+
+html.light header button.md\:hidden {
+  color: #1a1e26 !important;
+}
+
+/* Interactive elements default and button overrides */
+html.light .bg-white\/5:not(.stay-dark):not(.stay-dark *),
+html.light .bg-white\/10:not(.stay-dark):not(.stay-dark *) {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.07) !important;
+  color: #1f2937 !important;
+}
+
+/* Borders and lines throughout the site sections */
+html.light .border-white\/5:not(.stay-dark):not(.stay-dark *),
+html.light .border-white\/10:not(.stay-dark):not(.stay-dark *),
+html.light .border-white\/20:not(.stay-dark):not(.stay-dark *),
+html.light .border-neutral-800:not(.stay-dark):not(.stay-dark *),
+html.light .border-neutral-900:not(.stay-dark):not(.stay-dark *),
+html.light .border-neutral-800\/40:not(.stay-dark):not(.stay-dark *) {
+  border-color: rgba(0, 0, 0, 0.07) !important;
+}
+
+/* Custom styles for inputs in Form template */
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Animation for the pulsing effect */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation for the ping effect */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Custom animations for the orbital timeline */
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+/* Backdrop blur */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}
+
+/* Custom gradients */
+.bg-gradient-orbital {
+  background: linear-gradient(to bottom right, #6366f1, #3b82f6, #14b8a6);
+}
+
+/* Custom shadows */
+.shadow-orbital {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Custom transforms */
+.scale-125 {
+  transform: scale(1.25);
+}
+
+.scale-150 {
+  transform: scale(1.5);
+}
+
+/* Custom opacity values */
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+/* Custom border opacity */
+.border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.border-white\/30 {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.border-white\/40 {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom background opacity */
+.bg-black\/90 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.bg-white\/50 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-white\/80 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Custom text opacity */
+.text-white\/70 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-white\/80 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Highlighting actions keep their branding identity */
+html.light .bg-brand-red,
+html.light button.bg-brand-red.text-white:not(.stay-dark):not(.stay-dark *):not(.absolute *),
+html.light .fixed button.bg-brand-red.text-white:not(.stay-dark):not(.stay-dark *):not(.absolute *),
+html.light .text-white.bg-brand-red:not(.stay-dark):not(.stay-dark *):not(.absolute *) {
+  background-color: #db2429 !important;
+  color: #ffffff !important;
+}
+
+html.light .bg-brand-blue,
+html.light button.bg-brand-blue.text-white:not(.stay-dark):not(.stay-dark *):not(.absolute *),
+html.light button.bg-gradient-to-r.text-white:not(.stay-dark):not(.stay-dark *):not(.absolute *),
+html.light .text-white.bg-brand-blue:not(.stay-dark):not(.stay-dark *):not(.absolute *) {
+  color: #ffffff !important;
+}
+
+html.light .text-brand-red {
+  color: #db2429 !important;
+}
+
+html.light .text-brand-blue {
+  color: #1e3d95 !important;
+}
+
+html.light .bg-gradient-to-br.text-white:not(.stay-dark):not(.stay-dark *),
+html.light .bg-gradient-to-tl.text-white:not(.stay-dark):not(.stay-dark *) {
+  color: #ffffff !important;
+}
+
+html.light .text-emerald-400:not(.stay-dark):not(.stay-dark *),
+html.light .text-emerald-500:not(.stay-dark):not(.stay-dark *) {
+  color: #059669 !important;
+}
+
+html.light .text-blue-400:not(.stay-dark):not(.stay-dark *),
+html.light .text-blue-500:not(.stay-dark):not(.stay-dark *) {
+  color: #2563eb !important;
+}
+
+/* Solutions & Cards specific hover optimizations in Light mode */
+
+html.light .shadow-2xl {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Light theme overrides for mobile navigation overlay */
+html.light .fixed.inset-0.bg-neutral-950\/80 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+html.light .fixed.inset-0.bg-neutral-950\/80 button {
+  color: #1f2937 !important;
+}
+
+html.light .fixed.inset-0.bg-neutral-950\/80 button:not(.bg-brand-red):hover {
+  color: #db2429 !important;
+}
+
+html.light .fixed.inset-0.bg-neutral-950\/80 button.text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light .fixed.inset-0.bg-neutral-950\/80 button.text-blue-400 {
+  color: #2563eb !important;
+}
+
+/* ==========================================
+   LIQUID GLASS CARDS & STATS (DARK & LIGHT)
+   ========================================== */
+
+/* Dark Theme Liquid Glass (Default) */
+.trust-glass-card {
+  background: linear-gradient(135deg, rgba(23, 23, 23, 0.65) 0%, rgba(10, 10, 10, 0.45) 50%, rgba(15, 15, 15, 0.7) 100%) !important;
+  backdrop-filter: blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 1px 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+.trust-glass-card:hover {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.75) 0%, rgba(15, 15, 15, 0.55) 50%, rgba(20, 20, 20, 0.8) 100%) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), inset 1px 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+.trust-glass-stats {
+  background: linear-gradient(135deg, rgba(23, 23, 23, 0.5) 0%, rgba(10, 10, 10, 0.3) 50%, rgba(15, 15, 15, 0.55) 100%) !important;
+  backdrop-filter: blur(14px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(130%) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Light Theme Liquid Glass (Override) */
+html.light .trust-glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(249, 250, 251, 0.75) 50%, rgba(243, 244, 246, 0.85) 100%) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.01) !important;
+}
+
+html.light .trust-glass-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.93) 0%, rgba(249, 250, 251, 0.85) 50%, rgba(243, 244, 246, 0.93) 100%) !important;
+  border-color: rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05), 0 1px 4px rgba(0, 0, 0, 0.02) !important;
+}
+
+html.light .trust-glass-stats {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(249, 250, 251, 0.8) 50%, rgba(243, 244, 246, 0.88) 100%) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-color: rgba(0, 0, 0, 0.07) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Inner borders and gleams on Light Theme */
+html.light .trust-glass-card .glass-glow-highlight,
+html.light .trust-glass-stats .glass-glow-highlight {
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.85), inset -0.5px -0.5px 0 0.5px rgba(0, 0, 0, 0.02) !important;
+}
+
