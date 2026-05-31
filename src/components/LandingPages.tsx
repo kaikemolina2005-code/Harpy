@@ -40,16 +40,16 @@ export default function LandingPages({ onCtaClick, onLearnMoreClick }: LandingPa
                 Blindagem de Tráfego & Margem
               </h3>
               
-              <p className="text-white text-xs leading-relaxed">
+              <p className="text-white text-sm leading-relaxed">
                 Anúncios normais em marketplaces convertem na média de <strong className="text-white">2% a 4%</strong> devido a taxas excessivas, distrações e anúncios concorrentes recomendados na mesma tela. 
               </p>
               
-              <p className="text-white text-xs leading-relaxed">
+              <p className="text-white text-sm leading-relaxed">
                 Com uma <strong className="text-blue-400">Landing Page Harpy Premium</strong> focado no mobile, a experiência é canalizada: copywriter sênior redige sua oferta direto na mente do leitor, reduzindo o abandono de carrinho. A taxa salta para <strong className="text-emerald-400 font-extrabold">8% a 15% de conversão real</strong>.
               </p>
 
               {/* Core Feature bullet points */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xxs font-extrabold uppercase tracking-wide text-white">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-extrabold uppercase tracking-wide text-white">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-blue-500 flex-shrink-0" />
                   <span>Entrega Express em 48h</span>
@@ -73,11 +73,11 @@ export default function LandingPages({ onCtaClick, onLearnMoreClick }: LandingPa
             <div className="md:col-span-5 bg-blue-650/10 border border-blue-500/20 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/5 rounded-bl-full pointer-events-none" />
               
-              <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest block mb-2">Foco em Performance</span>
-              <div className="text-4xl font-black text-white mb-2 selection:bg-blue-600">
+              <span className="text-xs font-black text-blue-400 uppercase tracking-widest block mb-2">Foco em Performance</span>
+              <div className="text-5xl font-black text-white mb-2 selection:bg-blue-600">
                 8% a 15%
               </div>
-              <p className="text-[10px] text-white uppercase tracking-wider mb-6">
+              <p className="text-xs text-white uppercase tracking-wider mb-6">
                 Taxa de conversão média projetada em campanhas de tráfego direto.
               </p>
 

@@ -41,16 +41,16 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
                 Dono Absoluto dos seus Clientes
               </h3>
               
-              <p className="text-white text-xs leading-relaxed">
+              <p className="text-white text-sm leading-relaxed">
                 Manter sua marca restrita aos marketplaces significa pagar de <strong className="text-white">16% a 22% de taxa por transação</strong>, sem poder falar diretamente com o cliente e dividindo espaço com anúncios de concorrentes diretos na sua própria página.
               </p>
               
-              <p className="text-white text-xs leading-relaxed">
+              <p className="text-white text-sm leading-relaxed">
                 A <strong className="text-emerald-400">Assessoria Global</strong> constrói um ecossistema serverless de altíssima velocidade (Vercel, Clerk e Ecwid), totalmente integrado ao seu estoque logístico (Bling ou Tiny). Você passa a vender direto, reter os dados e escalar o LTV com margem cheia e blindada.
               </p>
 
               {/* Core Feature bullet points */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xxs font-extrabold uppercase tracking-wide text-white">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-extrabold uppercase tracking-wide text-white">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Ativo 100% de sua Propriedade</span>
@@ -74,11 +74,11 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
             <div className="md:col-span-5 bg-emerald-950/10 border border-emerald-500/20 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-bl-full pointer-events-none" />
               
-              <span className="text-[10px] font-black text-emerald-400 uppercase tracking-widest block mb-2">Padrão Ouro Tecnológico</span>
-              <div className="text-4xl font-black text-white mb-2 selection:bg-emerald-600">
+              <span className="text-xs font-black text-emerald-400 uppercase tracking-widest block mb-2">Padrão Ouro Tecnológico</span>
+              <div className="text-5xl font-black text-white mb-2 selection:bg-emerald-600">
                 Margem Cheia
               </div>
-              <p className="text-[10px] text-white uppercase tracking-wider mb-6">
+              <p className="text-xs text-white uppercase tracking-wider mb-6">
                 Reduza as taxas de comissões abusivas criando canais diretos de recompra permanente.
               </p>
 
