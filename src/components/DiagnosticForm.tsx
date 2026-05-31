@@ -184,7 +184,7 @@ export default function DiagnosticForm() {
                       className={`relative flex items-center justify-center h-14 rounded-xl cursor-pointer border-2 transition-all select-none overflow-hidden ${
                         selectedChannels.includes('ml')
                           ? 'border-white bg-[#FFE600] text-blue-900 scale-103 shadow-[0_6px_20px_rgba(255,230,0,0.45)]'
-                          : 'border-white/5 bg-neutral-900/60 hover:bg-neutral-900 text-neutral-400'
+                          : 'border-white/30 bg-white/80 backdrop-blur-md hover:bg-white text-neutral-700 shadow-[inset_2px_2px_1px_0_rgba(255,255,255,0.9),_0_4px_12px_rgba(0,0,0,0.06)]'
                       }`}
                     >
                       <span className="font-black text-xs uppercase tracking-wider">Mercado Livre</span>
@@ -201,7 +201,7 @@ export default function DiagnosticForm() {
                       className={`relative flex items-center justify-center h-14 rounded-xl cursor-pointer border-2 transition-all select-none overflow-hidden ${
                         selectedChannels.includes('shopee')
                           ? 'border-white bg-[#EE4D2D] text-white scale-103 shadow-[0_6px_20px_rgba(238,77,45,0.45)]'
-                          : 'border-white/5 bg-neutral-900/60 hover:bg-neutral-900 text-neutral-400'
+                          : 'border-white/30 bg-white/80 backdrop-blur-md hover:bg-white text-neutral-700 shadow-[inset_2px_2px_1px_0_rgba(255,255,255,0.9),_0_4px_12px_rgba(0,0,0,0.06)]'
                       }`}
                     >
                       <span className="font-black text-xs uppercase tracking-wider">Shopee</span>
@@ -218,7 +218,7 @@ export default function DiagnosticForm() {
                       className={`relative flex items-center justify-center h-14 rounded-xl cursor-pointer border-2 transition-all select-none overflow-hidden ${
                         selectedChannels.includes('amazon')
                           ? 'border-white bg-[#146eb4] text-white scale-103 shadow-[0_6px_20px_rgba(20,110,180,0.45)]'
-                          : 'border-white/5 bg-neutral-900/60 hover:bg-neutral-900 text-neutral-400'
+                          : 'border-white/30 bg-white/80 backdrop-blur-md hover:bg-white text-neutral-700 shadow-[inset_2px_2px_1px_0_rgba(255,255,255,0.9),_0_4px_12px_rgba(0,0,0,0.06)]'
                       }`}
                     >
                       <span className="font-black text-xs uppercase tracking-wider">Amazon</span>
