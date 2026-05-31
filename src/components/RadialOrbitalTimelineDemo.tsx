@@ -70,16 +70,51 @@ export function RadialOrbitalTimelineDemo() {
   return (
     <section className="py-24 bg-neutral-950 relative overflow-hidden" id="timeline">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
-        <div className="text-center mb-0">
-          <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-4">
-            Nossas <span className="text-brand-red">Soluções</span>
-          </h2>
-          <p className="text-neutral-400 text-lg max-w-2xl mx-auto font-medium">
-            Explore cada uma de nossas frentes de aceleração.
-          </p>
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+          {/* Left: text content */}
+          <div className="lg:w-1/2 flex flex-col justify-center text-left">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-black tracking-widest uppercase mb-5 w-fit select-none">
+              Metodologia Harpy
+            </span>
+            <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-6 leading-tight">
+              Nossas <span className="text-brand-red">Soluções</span>
+            </h2>
+            <p className="text-neutral-300 text-lg leading-relaxed mb-6">
+              Enquanto seus concorrentes adivinham, você decide com dados. A Harpy aplica um método de <strong className="text-white font-extrabold">5 fases comprovadas</strong> — do diagnóstico à escala — para transformar sua operação em uma máquina previsível de vendas.
+            </p>
+            <ul className="space-y-3 mb-8">
+              {[
+                "Diagnóstico técnico que revela onde você está perdendo dinheiro",
+                "Estratégia personalizada para o seu nicho e margem",
+                "Execução rápida: landing pages, anúncios e estrutura em dias",
+                "Otimização contínua com testes A/B e redução de CAC",
+                "Escala com previsibilidade — sem queimar verba",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-neutral-300 text-sm">
+                  <span className="mt-1 w-4 h-4 rounded-full bg-brand-red/20 border border-brand-red/50 flex items-center justify-center flex-shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-red block" />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#diagnostico"
+              onClick={(e) => { e.preventDefault(); document.getElementById('diagnostico')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-red text-white font-black text-sm tracking-wide hover:bg-brand-red/90 transition-all duration-200 w-fit shadow-lg shadow-brand-red/20"
+            >
+              Quero meu diagnóstico gratuito
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </div>
+
+          {/* Right: orbital timeline */}
+          <div className="lg:w-1/2 w-full">
+            <RadialOrbitalTimeline timelineData={timelineData} />
+          </div>
+
         </div>
-        
-        <RadialOrbitalTimeline timelineData={timelineData} />
       </div>
     </section>
   );
