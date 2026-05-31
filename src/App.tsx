@@ -230,7 +230,7 @@ export default function App() {
       </div>
 
       {/* Cinematic Perspective disclose Footer in back-ground */}
-      <Footer />
+      <Footer theme={theme} />
 
     </div>
   );

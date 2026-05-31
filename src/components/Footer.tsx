@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 import logoImg from './harpy-logo.png';
+import logoDarkImg from './harpy-logo-dark.png';
 
-export default function Footer() {
+interface FooterProps {
+  theme?: 'dark' | 'light';
+}
+
+export default function Footer({ theme = 'dark' }: FooterProps) {
   const [revealed, setRevealed] = useState(false);
 
   useEffect(() => {
@@ -42,7 +47,7 @@ export default function Footer() {
           <div className="lg:col-span-4">
             <a href="#" onClick={handleScrollToTop} className="flex items-center select-none group mb-4">
               <img 
-                src={logoImg} 
+                src={theme === 'dark' ? logoDarkImg : logoImg} 
                 alt="Harpy Assessoria Logo" 
                 className="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                 referrerPolicy="no-referrer"
