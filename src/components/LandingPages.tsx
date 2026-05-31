@@ -30,7 +30,7 @@ export default function LandingPages({ onCtaClick, onLearnMoreClick }: LandingPa
         </div>
 
         {/* Persuasive Sales Card Pitch */}
-        <div className="stay-dark bg-neutral-900/45 border border-white/5 hover:border-blue-500/10 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto backdrop-blur-sm shadow-[0_15px_40px_rgba(0,0,0,0.4)]">
+        <div className="stay-dark bg-blue-950/40 border border-blue-400/20 hover:border-blue-400/35 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto backdrop-blur-md shadow-[inset_2px_2px_1px_0_rgba(147,197,253,0.08),_inset_-1px_-1px_1px_1px_rgba(147,197,253,0.05),_0_15px_40px_rgba(10,20,60,0.35)]">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
             {/* Persuasive copy content */}
