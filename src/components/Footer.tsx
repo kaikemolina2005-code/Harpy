@@ -98,7 +98,7 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
           {/* Bottom bar */}
           <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-neutral-600">
             <p>© 2026 Harpy Assessoria. Todos os direitos reservados.</p>
-            <p className="text-neutral-600 text-[11px]">Este site foi desenvolvido pela <span className="text-brand-red font-bold">Harpy Assessoria</span></p>
+            <p className="text-neutral-400 text-sm font-semibold">Este site foi desenvolvido pela <span className="text-brand-red font-black">Harpy Assessoria</span></p>
             <button onClick={() => setShowPrivacy(true)} className="hover:text-neutral-400 transition-colors">
               Política de Privacidade
             </button>
