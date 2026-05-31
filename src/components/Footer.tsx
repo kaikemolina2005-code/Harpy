@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Instagram, Youtube, Linkedin } from 'lucide-react';
 import logoImg from './harpy-logo.png';
 import logoDarkImg from './harpy-logo-dark.png';
@@ -9,19 +9,7 @@ interface FooterProps {
 }
 
 export default function Footer({ theme = 'dark' }: FooterProps) {
-  const [revealed, setRevealed] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY + window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      const revealThreshold = docHeight - 350;
-      setRevealed(scrolled >= revealThreshold);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleScrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -33,12 +21,12 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
       {showPrivacy && <PrivacyPolicyModal onClose={() => setShowPrivacy(false)} />}
 
       <footer
-        className="fixed bottom-0 left-0 right-0 -z-10 w-full bg-gradient-to-b from-[#08080c] to-[#050507] pt-16 pb-8 px-6 overflow-hidden transition-all duration-300"
+        className="w-full bg-gradient-to-b from-[#08080c] to-[#050507] pt-16 pb-8 px-6 overflow-hidden relative"
       >
         {/* Upper radial glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-[radial-gradient(ellipse_at_top_center,rgba(219,36,41,0.06)_0%,transparent_60%)] pointer-events-none" />
 
-        <div className={`max-w-6xl mx-auto transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <div className="max-w-6xl mx-auto">
 
           {/* Main row */}
           <div className="flex flex-col md:flex-row items-start justify-between gap-12 mb-10">

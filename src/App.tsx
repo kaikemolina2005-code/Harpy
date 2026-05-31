@@ -71,7 +71,7 @@ export default function App() {
     <div className="bg-neutral-950 font-sans min-h-screen text-white select-none">
       
       {/* Scrollable Main Content wrapper with rounded bottom base for the reveal effect */}
-      <div className="relative z-10 bg-neutral-950 pb-[420px] rounded-b-[2.5rem] shadow-[0_20px_45px_rgba(0,0,0,0.8)] overflow-hidden">
+      <div className="relative z-10 bg-neutral-950 pb-0 rounded-b-none shadow-none overflow-hidden">
         
         {/* Ambient background decoration spread across the entire length of the page */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
@@ -229,7 +229,6 @@ export default function App() {
 
       </div>
 
-      {/* Cinematic Perspective disclose Footer in back-ground */}
       <Footer theme={theme} />
 
     </div>
