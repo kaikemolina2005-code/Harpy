@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, Wind, Sun, Moon, LayoutTemplate } from 'lucide-react';
-import logoImg from './faça_essa_logo_em_fundo_202605211948-removebg-preview.png';
+import logoImg from './harpy-logo.png';
 
 interface HeaderProps {
   onDiagnosticoClick: () => void;
@@ -93,17 +93,13 @@ export default function Header({
           />
 
           {/* Logo */}
-          <a href="#" onClick={handleLogoClick} className="flex items-center gap-2.5 transition-transform duration-200 hover:scale-102 select-none group">
+          <a href="#" onClick={handleLogoClick} className="flex items-center transition-transform duration-200 hover:scale-102 select-none group">
             <img 
               src={logoImg} 
-              alt="Harpy Logo" 
-              className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300"
+              alt="Harpy Assessoria Logo" 
+              className="h-12 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
               referrerPolicy="no-referrer"
             />
-            <div className="flex flex-col select-none leading-none tracking-tight">
-              <span className="font-extrabold text-lg text-brand-red tracking-wider">HARPY</span>
-              <span className="font-bold text-xxs uppercase tracking-widest text-white mt-0.5">Assessoria</span>
-            </div>
           </a>
 
           {/* Nav Menu */}

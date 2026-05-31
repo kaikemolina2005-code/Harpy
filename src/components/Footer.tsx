@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
-import logoImg from './faça_essa_logo_em_fundo_202605211948-removebg-preview.png';
+import logoImg from './harpy-logo.png';
 
 export default function Footer() {
   const [revealed, setRevealed] = useState(false);
@@ -40,17 +40,13 @@ export default function Footer() {
           
           {/* Brand & Contacts */}
           <div className="lg:col-span-4">
-            <a href="#" onClick={handleScrollToTop} className="flex items-center gap-2.5 select-none group mb-4">
+            <a href="#" onClick={handleScrollToTop} className="flex items-center select-none group mb-4">
               <img 
                 src={logoImg} 
-                alt="Harpy Logo" 
-                className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+                alt="Harpy Assessoria Logo" 
+                className="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
                 referrerPolicy="no-referrer"
               />
-              <div className="flex flex-col leading-none tracking-tight">
-                <span className="font-display font-black text-lg text-white">HARPY</span>
-                <span className="font-bold text-xxs uppercase tracking-widest text-white mt-0.5">Assessoria</span>
-              </div>
             </a>
             <p className="text-neutral-500 text-xs leading-relaxed max-w-xs mb-6">
               Assessoria especializada em Mercado Livre e Amazon. Aumente seu faturamento e escale sua operação com estratégias de alta performance e tecnologia global.
