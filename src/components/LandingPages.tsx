@@ -70,7 +70,7 @@ export default function LandingPages({ onCtaClick, onLearnMoreClick }: LandingPa
             </div>
 
             {/* Interactive Badge and High-Conversion Stats CTA card */}
-            <div className="md:col-span-5 bg-blue-650/10 border border-blue-500/20 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group">
+            <div className="md:col-span-5 bg-blue-600/25 backdrop-blur-md border border-blue-400/40 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group shadow-[inset_2px_2px_1px_0_rgba(147,197,253,0.2),_inset_-1px_-1px_1px_1px_rgba(147,197,253,0.1),_0_8px_32px_rgba(37,99,235,0.2)]">
               <div className="absolute top-0 right-0 w-16 h-16 bg-blue-500/5 rounded-bl-full pointer-events-none" />
               
               <span className="text-xs font-black text-blue-400 uppercase tracking-widest block mb-2">Foco em Performance</span>
