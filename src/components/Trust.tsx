@@ -12,7 +12,7 @@ export default function Trust() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
           
           {/* Mercado Livre Card */}
-          <div className="trust-glass-card lg:col-span-4 bg-neutral-900/60 hover:bg-neutral-900/80 border border-white/5 hover:border-yellow-500/20 rounded-3xl p-8 transition-all duration-300 relative group overflow-hidden">
+          <div className="trust-glass-card lg:col-span-3 bg-neutral-900/60 hover:bg-neutral-900/80 border border-white/5 hover:border-yellow-500/20 rounded-3xl p-8 transition-all duration-300 relative group overflow-hidden">
             {/* Liquid glass inner glow & shine overlays */}
             <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_right,rgba(250,204,21,0.08)_0%,transparent_70%)] pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity" />
             <div className="absolute inset-0 rounded-3xl border border-white/5 pointer-events-none shadow-[inset_1px_1px_1px_0_rgba(255,255,255,0.08),_inset_-1px_-1px_1px_0_rgba(255,255,255,0.03)] glass-glow-highlight" />
@@ -40,7 +40,7 @@ export default function Trust() {
           </div>
 
           {/* Interactive Video Frame */}
-          <div className="lg:col-span-4 flex flex-col items-center">
+          <div className="lg:col-span-6 flex flex-col items-center">
             <div 
               onClick={() => setVideoOpen(true)}
               className="relative w-full aspect-video rounded-3xl border-3 border-brand-red/30 hover:border-brand-red/60 overflow-hidden bg-neutral-900 cursor-pointer shadow-[0_0_50px_rgba(219,36,41,0.15)] hover:shadow-[0_0_60px_rgba(219,36,41,0.3)] transition-all duration-300 group"
@@ -67,7 +67,7 @@ export default function Trust() {
           </div>
 
           {/* Amazon Card */}
-          <div className="trust-glass-card lg:col-span-4 bg-neutral-900/60 hover:bg-neutral-900/80 border border-white/5 hover:border-brand-blue/20 rounded-3xl p-8 transition-all duration-300 relative group overflow-hidden">
+          <div className="trust-glass-card lg:col-span-3 bg-neutral-900/60 hover:bg-neutral-900/80 border border-white/5 hover:border-brand-blue/20 rounded-3xl p-8 transition-all duration-300 relative group overflow-hidden">
             {/* Liquid glass inner glow & shine overlays */}
             <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(ellipse_at_right,rgba(30,61,149,0.08)_0%,transparent_70%)] pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity" />
             <div className="absolute inset-0 rounded-3xl border border-white/5 pointer-events-none shadow-[inset_1px_1px_1px_0_rgba(255,255,255,0.08),_inset_-1px_-1px_1px_0_rgba(255,255,255,0.03)] glass-glow-highlight" />
