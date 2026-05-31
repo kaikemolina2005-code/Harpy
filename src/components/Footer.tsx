@@ -37,7 +37,7 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
                 <img
                   src={theme === 'dark' ? logoDarkImg : logoImg}
                   alt="Harpy Assessoria Logo"
-                  className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   referrerPolicy="no-referrer"
                 />
               </a>
@@ -98,6 +98,7 @@ export default function Footer({ theme = 'dark' }: FooterProps) {
           {/* Bottom bar */}
           <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-neutral-600">
             <p>© 2026 Harpy Assessoria. Todos os direitos reservados.</p>
+            <p className="text-neutral-600 text-[11px]">Este site foi desenvolvido pela <span className="text-brand-red font-bold">Harpy Assessoria</span></p>
             <button onClick={() => setShowPrivacy(true)} className="hover:text-neutral-400 transition-colors">
               Política de Privacidade
             </button>
