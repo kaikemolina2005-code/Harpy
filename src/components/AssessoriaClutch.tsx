@@ -38,34 +38,34 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
             <div className="md:col-span-7 space-y-4">
               <h3 className="text-white font-extrabold text-xl sm:text-2xl tracking-wider uppercase flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-emerald-400" />
-                Dono Absoluto dos seus Clientes
+                Pare de financiar o marketplace com sua margem
               </h3>
               
               <p className="text-white text-base leading-relaxed">
-                Manter sua marca restrita aos marketplaces significa pagar de <strong className="text-white">16% a 22% de taxa por transação</strong>, sem poder falar diretamente com o cliente e dividindo espaço com anúncios de concorrentes diretos na sua própria página.
+                A cada venda no Mercado Livre ou Amazon, você paga <strong className="text-white">de 16% a 22% de comissão</strong> — e ainda não fica com o contato do cliente. Amanhã as regras mudam, a plataforma aumenta a taxa e o seu negócio fica refém.
               </p>
               
               <p className="text-white text-base leading-relaxed">
-                A <strong className="text-emerald-400">Assessoria Global</strong> constrói um ecossistema serverless de altíssima velocidade (Vercel, Clerk e Ecwid), totalmente integrado ao seu estoque logístico (Bling ou Tiny). Você passa a vender direto, reter os dados e escalar o LTV com margem cheia e blindada.
+                A <strong className="text-emerald-400">Assessoria Global Harpy</strong> monta seu e-commerce próprio em menos de 30 dias: integrado ao seu estoque (Bling ou Tiny), com velocidade máxima no mobile e zero dependência de plataforma. <strong className="text-white">Você vende direto, retém os dados do cliente e recupera toda a margem perdida.</strong>
               </p>
 
               {/* Core Feature bullet points */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm font-extrabold uppercase tracking-wide text-white">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  <span>Ativo 100% de sua Propriedade</span>
+                  <span>Loja 100% sua, sem comissão</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  <span>Sincronização de Estoque ERP</span>
+                  <span>Estoque sincronizado (Bling/Tiny)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  <span>Hospedagem Edge Serverless</span>
+                  <span>Site veloz em qualquer device</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  <span>Login Seguro Social Infiltrado</span>
+                  <span>Dados e clientes são seus</span>
                 </div>
               </div>
             </div>
@@ -74,12 +74,12 @@ export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: Asses
             <div className="md:col-span-5 bg-emerald-600/25 backdrop-blur-md border border-emerald-400/40 rounded-2xl p-6 text-center flex flex-col justify-center relative overflow-hidden group shadow-[inset_2px_2px_1px_0_rgba(110,231,183,0.2),_inset_-1px_-1px_1px_1px_rgba(110,231,183,0.1),_0_8px_32px_rgba(5,150,80,0.2)]">
               <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-bl-full pointer-events-none" />
               
-              <span className="text-sm font-black text-emerald-400 uppercase tracking-widest block mb-2">Padrão Ouro Tecnológico</span>
+              <span className="text-sm font-black text-emerald-400 uppercase tracking-widest block mb-2">O que você recupera</span>
               <div className="text-5xl font-black text-white mb-2 selection:bg-emerald-600">
                 Margem Cheia
               </div>
               <p className="text-sm text-white uppercase tracking-wider mb-6">
-                Reduza as taxas de comissões abusivas criando canais diretos de recompra permanente.
+                Venda direto ao cliente. Zero comissão de plataforma. LTV e recompra 100% seus.
               </p>
 
               {/* "Saber mais" is the primary button in this card */}
