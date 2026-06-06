@@ -15,6 +15,7 @@ import Testimonials from './components/Testimonials';
 import DiagnosticForm from './components/DiagnosticForm';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import GlobalBackground from './components/GlobalBackground';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'landing-page-details' | 'clutch-details' | 'google-ads' | 'meta-ads' | 'ecommerce' | 'assessoria-marketplace' | 'consultoria-marketplace'>('home');
@@ -69,67 +70,70 @@ export default function App() {
   };
 
   return (
-    <div className="bg-black font-sans min-h-screen text-white select-none relative">
+    <div className="bg-neutral-950 font-sans min-h-screen text-white select-none relative">
+      {/* Global Background Blobs */}
+      <GlobalBackground />
+      
       {/* Scrollable Main Content wrapper with rounded bottom base for the reveal effect */}
-      <div className="relative z-10 bg-black pb-0 rounded-b-none shadow-none overflow-hidden">
+      <div className="relative z-10 bg-neutral-950/90 pb-0 rounded-b-none shadow-none overflow-hidden">
         
         {/* Ambient background decoration spread across the entire length of the page */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
-          {/* Subtle high-tech dotted grid pattern - DISABLED */}
-          {/* <div className="absolute inset-0 bg-[radial-gradient(#ffffff04_1.5px,transparent_1.5px)] [background-size:32px_32px] opacity-80" /> */}
+          {/* Subtle high-tech dotted grid pattern repeating throughout the page */}
+          <div className="absolute inset-0 bg-[radial-gradient(#ffffff04_1.5px,transparent_1.5px)] [background-size:32px_32px] opacity-80" />
 
-          {/* Left guiding performance line - DISABLED */}
-          {/* <div className="absolute left-4 xl:left-12 top-0 bottom-0 w-[1px] bg-gradient-to-b from-brand-red/0 via-brand-red/10 via-brand-blue/10 via-emerald-500/15 via-brand-blue/10 to-brand-red/0 hidden sm:block" /> */}
+          {/* Left guiding performance line */}
+          <div className="absolute left-4 xl:left-12 top-0 bottom-0 w-[1px] bg-gradient-to-b from-brand-red/0 via-brand-red/10 via-brand-blue/10 via-emerald-500/15 via-brand-blue/10 to-brand-red/0 hidden sm:block" />
           
-          {/* Right guiding performance line - DISABLED */}
-          {/* <div className="absolute right-4 xl:right-12 top-0 bottom-0 w-[1px] bg-gradient-to-b from-brand-red/0 via-brand-blue/10 via-brand-red/10 via-emerald-500/15 via-brand-blue/10 to-brand-red/0 hidden sm:block" /> */}
+          {/* Right guiding performance line */}
+          <div className="absolute right-4 xl:right-12 top-0 bottom-0 w-[1px] bg-gradient-to-b from-brand-red/0 via-brand-blue/10 via-brand-red/10 via-emerald-500/15 via-brand-blue/10 to-brand-red/0 hidden sm:block" />
 
-          {/* Floating graphic element: Left margin eagle/harpy design cues - DISABLED */}
-          {/* <div className="absolute left-6 xl:left-16 top-[400px] text-brand-red/10 max-w-[120px] filter blur-[0.5px]">
+          {/* Floating graphic element: Left margin eagle/harpy design cues (very subtle) */}
+          <div className="absolute left-6 xl:left-16 top-[400px] text-brand-red/10 max-w-[120px] filter blur-[0.5px]">
             <svg viewBox="0 0 100 100" fill="currentColor" className="w-16 h-16 animate-pulse duration-[8000ms]">
               <path d="M10 20 C 30 20, 50 10, 90 40 C 60 40, 40 45, 10 20 Z" />
               <path d="M15 30 C 35 30, 55 25, 85 50 C 65 50, 45 55, 15 30 Z" />
               <path d="M20 40 C 40 40, 60 35, 80 60 C 65 60, 50 65, 20 40 Z" />
             </svg>
-          </div> */}
+          </div>
 
-          {/* <div className="absolute right-6 xl:right-16 top-[1500px] text-brand-blue/8 max-w-[120px]">
+          <div className="absolute right-6 xl:right-16 top-[1500px] text-brand-blue/8 max-w-[120px]">
             <svg viewBox="0 0 100 100" fill="currentColor" className="w-20 h-20 rotate-180 opacity-60">
               <path d="M10 20 C 30 20, 50 10, 90 40 C 60 40, 40 45, 10 20 Z" />
               <path d="M15 30 C 35 30, 55 25, 85 50 C 65 50, 45 55, 15 30 Z" />
             </svg>
-          </div> */}
+          </div>
 
-          {/* <div className="absolute left-8 xl:left-20 top-[3500px] text-emerald-500/10 max-w-[120px]">
+          <div className="absolute left-8 xl:left-20 top-[3500px] text-emerald-500/10 max-w-[120px]">
             <svg viewBox="0 0 100 100" fill="currentColor" className="w-16 h-16">
               <path d="M10 20 C 30 20, 50 10, 90 40 C 60 40, 40 45, 10 20 Z" />
             </svg>
-          </div> */}
+          </div>
 
-          {/* Large Ambient Glow Blobs dispersed throughout - DISABLED */}
+          {/* Large Ambient Glow Blobs dispersed throughout */}
           {/* Spot 1: Red glow left of Trust section */}
-          {/* <div className="absolute left-[-20%] top-[400px] w-[60%] aspect-square rounded-full bg-brand-red/5 filter blur-[120px] mix-blend-screen" /> */}
+          <div className="absolute left-[-20%] top-[400px] w-[60%] aspect-square rounded-full bg-brand-red/5 filter blur-[120px] mix-blend-screen" />
 
           {/* Spot 2: Blue glow right of scaling section */}
-          {/* <div className="absolute right-[-25%] top-[1100px] w-[65%] aspect-square rounded-full bg-brand-blue/5 filter blur-[140px] mix-blend-screen" /> */}
+          <div className="absolute right-[-25%] top-[1100px] w-[65%] aspect-square rounded-full bg-brand-blue/5 filter blur-[140px] mix-blend-screen" />
 
           {/* Spot 3: Red glow right of results section */}
-          {/* <div className="absolute right-[-15%] top-[2000px] w-[50%] aspect-square rounded-full bg-brand-red/5 filter blur-[110px] mix-blend-screen" /> */}
+          <div className="absolute right-[-15%] top-[2000px] w-[50%] aspect-square rounded-full bg-brand-red/5 filter blur-[110px] mix-blend-screen" />
 
           {/* Spot 4: Blue/Indigo glow left of Landing Pages */}
-          {/* <div className="absolute left-[-25%] top-[2800px] w-[60%] aspect-square rounded-full bg-brand-blue/5 filter blur-[130px] mix-blend-screen" /> */}
+          <div className="absolute left-[-25%] top-[2800px] w-[60%] aspect-square rounded-full bg-brand-blue/5 filter blur-[130px] mix-blend-screen" />
 
           {/* Spot 5: Emerald glow right of Assessoria Clutch */}
-          {/* <div className="absolute right-[-20%] top-[3700px] w-[55%] aspect-square rounded-full bg-emerald-500/6 filter blur-[120px] mix-blend-screen" /> */}
+          <div className="absolute right-[-20%] top-[3700px] w-[55%] aspect-square rounded-full bg-emerald-500/6 filter blur-[120px] mix-blend-screen" />
 
           {/* Spot 6: Red glow left of Testimonials / Diagnostic form */}
-          {/* <div className="absolute left-[-25%] top-[4600px] w-[60%] aspect-square rounded-full bg-brand-red/5 filter blur-[130px] mix-blend-screen" /> */}
+          <div className="absolute left-[-25%] top-[4600px] w-[60%] aspect-square rounded-full bg-brand-red/5 filter blur-[130px] mix-blend-screen" />
 
           {/* Spot 7: Blue glow right of FAQ */}
-          {/* <div className="absolute right-[-25%] top-[5400px] w-[55%] aspect-square rounded-full bg-brand-blue/4 filter blur-[120px] mix-blend-screen" /> */}
+          <div className="absolute right-[-25%] top-[5400px] w-[55%] aspect-square rounded-full bg-brand-blue/4 filter blur-[120px] mix-blend-screen" />
 
-          {/* Technical Grid Accents / Dynamic Concentric Rings - DISABLED */}
-          {/* <div className="absolute left-[-50px] xl:left-[-20px] top-[900px] w-24 h-24 rounded-full border border-neutral-800/40 flex items-center justify-center opacity-60">
+          {/* Technical Grid Accents / Dynamic Concentric Rings dispersed at the borders */}
+          <div className="absolute left-[-50px] xl:left-[-20px] top-[900px] w-24 h-24 rounded-full border border-neutral-800/40 flex items-center justify-center opacity-60">
             <div className="w-16 h-16 rounded-full border border-neutral-800/30 flex items-center justify-center">
               <div className="w-8 h-8 rounded-full border border-neutral-800/20" />
             </div>
@@ -139,13 +143,12 @@ export default function App() {
             <div className="w-24 h-24 rounded-full border border-neutral-800/30 flex items-center justify-center">
               <div className="w-12 h-12 rounded-full border border-neutral-800/20" />
             </div>
-          </div> */}
+          </div>
 
-          {/* Technical accents - DISABLED */}
-          {/* <div className="absolute left-[2%] top-[4800px] w-16 h-16 border-l border-t border-brand-red/10 opacity-70" />
+          <div className="absolute left-[2%] top-[4800px] w-16 h-16 border-l border-t border-brand-red/10 opacity-70" />
           <div className="absolute right-[2%] top-[1800px] w-16 h-16 border-r border-b border-brand-blue/10 opacity-70" />
           <div className="absolute left-[3%] top-[2900px] w-12 h-12 border border-dashed border-neutral-800/30 rounded-full animate-spin-slow opacity-80" />
-          <div className="absolute right-[4%] top-[4100px] w-14 h-14 border border-dashed border-emerald-500/20 rounded-full animate-spin-slow opacity-80" /> */}
+          <div className="absolute right-[4%] top-[4100px] w-14 h-14 border border-dashed border-emerald-500/20 rounded-full animate-spin-slow opacity-80" />
         </div>
 
         {/* Header with pass-down props */}
