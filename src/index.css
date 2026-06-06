@@ -76,6 +76,11 @@
 .pc-blob-1 { animation: pc-float-1 20s ease-in-out infinite alternate; }
 .pc-blob-2 { animation: pc-float-2 25s ease-in-out infinite alternate; }
 .pc-drag-hint { animation: pc-pulse 2s infinite; }
+html.light .pc-drag-hint {
+  background: rgba(0, 0, 0, 0.12) !important;
+  color: #374151 !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
 
 /* Hide scrollbar for the canvas */
 .pc-canvas::-webkit-scrollbar { display: none; }
