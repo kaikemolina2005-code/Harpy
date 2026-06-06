@@ -46,7 +46,7 @@ export default function Testimonials({ onCtaClick }: TestimonialsProps) {
   );
 
   return (
-    <section className="bg-neutral-950 py-24 relative overflow-hidden text-white border-y border-white/5" id="cases">
+    <section className="bg-black py-24 relative overflow-hidden text-white" id="cases">
       
       {/* Soft light leaks */}
       <div className="absolute top-1/4 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl z-0 pointer-events-none" />

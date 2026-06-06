@@ -8,7 +8,7 @@ interface AssessoriaClutchProps {
 
 export default function AssessoriaClutch({ onCtaClick, onLearnMoreClick }: AssessoriaClutchProps) {
   return (
-    <section className="bg-transparent py-20 px-6 relative overflow-hidden text-white border-t border-white/5" id="assessoria-clutch">
+    <section className="bg-black py-20 px-6 relative overflow-hidden text-white" id="assessoria-clutch">
       
       {/* Background ambient light */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(34,197,94,0.03)_0%,transparent_60%)] pointer-events-none" />
