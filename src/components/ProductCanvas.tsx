@@ -19,6 +19,61 @@ interface ProductCanvasProps {
 
 const produtos: Produto[] = [
   {
+    id: 4,
+    icone: "fa-solid fa-store",
+    titulo: "Assessoria Mktplace",
+    descricao:
+      "Operação técnica focada em ranquear seus produtos e escalar suas vendas nos principais canais.",
+    rota: "assessoria-marketplace",
+    incluso: [
+      { texto: "<strong>Criação e Gestão</strong> de Product Ads." },
+      { texto: "<strong>Otimização de anúncios</strong> (+20 imagens por mês)." },
+      { texto: "<strong>Quatro reuniões</strong> mensais." },
+    ],
+    diferenciais: [
+      {
+        titulo: "Otimização de SEO",
+        descricao:
+          "Configuração técnica dos títulos e descrições para garantir ranqueamento orgânico no topo das buscas.",
+      },
+      {
+        titulo: "Foco em Retorno",
+        descricao:
+          "Campanhas patrocinadas geridas estrategicamente para maximizar a visibilidade com lucro.",
+      },
+      {
+        titulo: "Conversão Visual",
+        descricao:
+          "Refinamento profissional que destaca seus produtos dos concorrentes e transmite mais confiança.",
+      },
+    ],
+  },
+  {
+    id: 5,
+    icone: "fa-solid fa-lightbulb",
+    titulo: "Consultoria Mktplace",
+    descricao:
+      "Inteligência e direcionamento estratégico para o seu time interno saber exatamente o que executar.",
+    rota: "consultoria-marketplace",
+    diferenciais: [
+      {
+        titulo: "Plano Acessível",
+        descricao:
+          "R$ 500 Mensais para ter um especialista lado a lado orientando suas decisões de e-commerce.",
+      },
+      {
+        titulo: "Reuniões Periódicas",
+        descricao:
+          "4 encontros no mês (1x por semana) para análises de rotas e novos planejamentos táticos.",
+      },
+      {
+        titulo: "Independência",
+        descricao:
+          "Transferência de know-how para que a sua própria equipe ganhe maturidade comercial.",
+      },
+    ],
+  },
+  {
     id: 1,
     icone: "fa-brands fa-google",
     icone2: "fa-brands fa-meta",
@@ -86,61 +141,6 @@ const produtos: Produto[] = [
         titulo: "Gestores Experientes",
         descricao:
           "Campanhas controladas por quem realmente entende de estratégia de vendas, e não apenas de apertar botões.",
-      },
-    ],
-  },
-  {
-    id: 4,
-    icone: "fa-solid fa-store",
-    titulo: "Assessoria Mktplace",
-    descricao:
-      "Operação técnica focada em ranquear seus produtos e escalar suas vendas nos principais canais.",
-    rota: "assessoria-marketplace",
-    incluso: [
-      { texto: "<strong>Criação e Gestão</strong> de Product Ads." },
-      { texto: "<strong>Otimização de anúncios</strong> (+20 imagens por mês)." },
-      { texto: "<strong>Quatro reuniões</strong> mensais." },
-    ],
-    diferenciais: [
-      {
-        titulo: "Otimização de SEO",
-        descricao:
-          "Configuração técnica dos títulos e descrições para garantir ranqueamento orgânico no topo das buscas.",
-      },
-      {
-        titulo: "Foco em Retorno",
-        descricao:
-          "Campanhas patrocinadas geridas estrategicamente para maximizar a visibilidade com lucro.",
-      },
-      {
-        titulo: "Conversão Visual",
-        descricao:
-          "Refinamento profissional que destaca seus produtos dos concorrentes e transmite mais confiança.",
-      },
-    ],
-  },
-  {
-    id: 5,
-    icone: "fa-solid fa-lightbulb",
-    titulo: "Consultoria Mktplace",
-    descricao:
-      "Inteligência e direcionamento estratégico para o seu time interno saber exatamente o que executar.",
-    rota: "consultoria-marketplace",
-    diferenciais: [
-      {
-        titulo: "Plano Acessível",
-        descricao:
-          "R$ 500 Mensais para ter um especialista lado a lado orientando suas decisões de e-commerce.",
-      },
-      {
-        titulo: "Reuniões Periódicas",
-        descricao:
-          "4 encontros no mês (1x por semana) para análises de rotas e novos planejamentos táticos.",
-      },
-      {
-        titulo: "Independência",
-        descricao:
-          "Transferência de know-how para que a sua própria equipe ganhe maturidade comercial.",
       },
     ],
   },
