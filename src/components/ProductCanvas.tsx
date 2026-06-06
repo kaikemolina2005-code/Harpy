@@ -329,6 +329,7 @@ export default function ProductCanvas({ onSaberMais }: ProductCanvasProps) {
   return (
     <section
       id="ecossistema"
+      className="stay-dark"
       style={{
         position: "relative",
         height: "100vh",
