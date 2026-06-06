@@ -333,7 +333,7 @@ export default function ProductCanvas({ onSaberMais }: ProductCanvasProps) {
         position: "relative",
         height: "100vh",
         overflow: "hidden",
-        backgroundColor: "#050a15",
+        backgroundColor: "#000000",
         color: "#ffffff",
       }}
     >
