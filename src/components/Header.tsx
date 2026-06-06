@@ -124,10 +124,10 @@ export default function Header({
               <LayoutTemplate className="w-4 h-4 text-blue-400" /> Landing Pages
             </button>
             <button
-              onClick={() => handleMenuClick('especialistas')}
+              onClick={() => handleMenuClick('marketplaces')}
               className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-2 rounded-xl transition-all cursor-pointer"
             >
-              Especialistas
+              Assessoria Mktplace
             </button>
             <button
               onClick={() => handleMenuClick('cases')}
@@ -206,10 +206,10 @@ export default function Header({
             <LayoutTemplate className="w-5 h-5 text-blue-400" /> Landing Pages
           </button>
           <button
-            onClick={() => handleMenuClick('especialistas')}
+            onClick={() => handleMenuClick('marketplaces')}
             className="text-xl font-bold text-white hover:text-brand-red transition-colors cursor-pointer"
           >
-            Especialistas
+            Assessoria Mktplace
           </button>
           <button
             onClick={() => handleMenuClick('cases')}
