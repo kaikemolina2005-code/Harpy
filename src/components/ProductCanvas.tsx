@@ -157,40 +157,6 @@ const produtos: Produto[] = [
     ],
   },
   {
-    id: 6,
-    icone: "fa-solid fa-scale-balanced",
-    titulo: "CRM Advocacia",
-    descricao:
-      "Controle absoluto e triagem inteligente desde o primeiro contato até o fechamento processual.",
-    incluso: [
-      { texto: "<strong>Integração</strong> com WhatsApp." },
-      { texto: "<strong>IA de direcionamento</strong> de cliente." },
-      { texto: "<strong>Kanban</strong> totalmente editável." },
-      { texto: "<strong>Dashboard de métricas</strong> do comercial." },
-      { texto: "<strong>Dashboard de métricas</strong> administrativas." },
-      { texto: "<strong>Integração</strong> com One Drive." },
-      { texto: "<strong>Dúvidas</strong> respondidas no WhatsApp." },
-      { texto: "<strong>Uma reunião</strong> de apresentação." },
-    ],
-    diferenciais: [
-      {
-        titulo: "Automação Jurídica",
-        descricao:
-          "Elimina o gargalo do atendimento manual e acelera o tempo de resposta do escritório.",
-      },
-      {
-        titulo: "Ecosistema Centralizado",
-        descricao:
-          "Chega de perder documentos; sincronização nativa e segura para gerenciar todos os arquivos.",
-      },
-      {
-        titulo: "Visão Gerencial",
-        descricao:
-          "Controle instantâneo para os sócios acompanharem a taxa de conversão e a eficiência da equipe.",
-      },
-    ],
-  },
-  {
     id: 7,
     icone: "fa-solid fa-window",
     titulo: "Landing Pages de Alta Conversão",
