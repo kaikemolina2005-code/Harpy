@@ -235,6 +235,21 @@ html.light .bg-neutral-900\/30:not(.stay-dark) {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 10px 40px rgba(0, 0, 0, 0.03) !important;
 }
 
+/* Força texto branco em seções stay-dark no modo claro */
+html.light .stay-dark,
+html.light .stay-dark h1,
+html.light .stay-dark h2,
+html.light .stay-dark h3,
+html.light .stay-dark h4,
+html.light .stay-dark h5,
+html.light .stay-dark h6,
+html.light .stay-dark p,
+html.light .stay-dark span,
+html.light .stay-dark li,
+html.light .stay-dark strong {
+  color: #ffffff !important;
+}
+
 /* Accordion hover action items */
 html.light .hover\:bg-white\/\[0\.02\]:hover {
   background-color: rgba(0, 0, 0, 0.02) !important;

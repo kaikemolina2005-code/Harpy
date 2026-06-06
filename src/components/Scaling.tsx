@@ -28,9 +28,9 @@ export default function Scaling({ onDiagnosticoClick }: ScalingProps) {
   };
 
   return (
-    <section className="bg-transparent py-24 px-6 relative overflow-hidden text-white border-b border-white/5" id="solucoes">
-      {/* Glow effects */}
-      <div className="absolute top-0 right-1/4 -translate-y-1/2 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl z-0 pointer-events-none" />
+    <section className="bg-black py-24 px-6 relative overflow-hidden text-white border-b border-white/5 stay-dark" id="solucoes">
+      {/* Glow effects - disabled for pure black */}
+      {/* <div className="absolute top-0 right-1/4 -translate-y-1/2 w-96 h-96 bg-brand-blue/5 rounded-full blur-3xl z-0 pointer-events-none" /> */}
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         
