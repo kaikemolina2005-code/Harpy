@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Wind, Sun, Moon, LayoutTemplate } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Wind, Sun, Moon, LayoutTemplate, Store } from 'lucide-react';
 import logoImg from './harpy-logo.png';
 import logoDarkImg from './harpy-logo-dark.png';
 
@@ -125,9 +125,9 @@ export default function Header({
             </button>
             <button
               onClick={() => handleMenuClick('marketplaces')}
-              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap"
+              className="text-brand-red hover:text-red-400 hover:bg-brand-red/10 font-extrabold text-sm px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
             >
-              Assessoria Mktplace
+              <Store className="w-4 h-4 text-brand-red" /> Assessoria Mktplace
             </button>
             <button
               onClick={() => handleMenuClick('cases')}
@@ -207,9 +207,9 @@ export default function Header({
           </button>
           <button
             onClick={() => handleMenuClick('marketplaces')}
-            className="text-xl font-bold text-white hover:text-brand-red transition-colors cursor-pointer"
+            className="text-xl font-bold text-brand-red hover:text-red-400 transition-colors cursor-pointer flex items-center gap-2"
           >
-            Assessoria Mktplace
+            <Store className="w-5 h-5 text-brand-red" /> Assessoria Mktplace
           </button>
           <button
             onClick={() => handleMenuClick('cases')}
