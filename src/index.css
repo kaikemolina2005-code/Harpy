@@ -59,6 +59,51 @@
   animation: marquee-down 32s linear infinite;
 }
 
+/* ── ProductCanvas component ── */
+@keyframes pc-float-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.1); }
+}
+@keyframes pc-float-2 {
+  0%   { transform: translate(50px, 50px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes pc-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+.pc-blob-1 { animation: pc-float-1 20s ease-in-out infinite alternate; }
+.pc-blob-2 { animation: pc-float-2 25s ease-in-out infinite alternate; }
+.pc-drag-hint { animation: pc-pulse 2s infinite; }
+
+/* Hide scrollbar for the canvas */
+.pc-canvas::-webkit-scrollbar { display: none; }
+
+/* Card hover lift (only when not expanded) */
+.pc-card-hover:hover {
+  transform: translateY(-15px) !important;
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(255,255,255,0.15) !important;
+  box-shadow: 0 35px 60px rgba(230,57,70,0.15) !important;
+}
+
+/* Footer arrow hint visibility on hover */
+.pc-card-hover .pc-card-footer {
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.pc-card-hover:hover .pc-card-footer {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Close button hover */
+.pc-close-btn:hover {
+  background: #e63946 !important;
+}
+
 /* Shimmering bar animation */
 @keyframes shimmer {
   0% {

@@ -5,7 +5,7 @@ import Trust from './components/Trust';
 import Scaling from './components/Scaling';
 import Marketplaces from './components/Marketplaces';
 import Results from './components/Results';
-import RadialOrbitalTimelineDemo from './components/RadialOrbitalTimelineDemo';
+import ProductCanvas from './components/ProductCanvas';
 import LandingPages from './components/LandingPages';
 import LandingProductDetails from './components/LandingProductDetails';
 import AssessoriaClutch from './components/AssessoriaClutch';
@@ -171,8 +171,8 @@ export default function App() {
             {/* Essential Marketplaces coverage */}
             <Marketplaces onCtaClick={() => scrollToSection('diagnostico')} />
             
-            {/* Orbital Timeline solutions section */}
-            <RadialOrbitalTimelineDemo />
+            {/* Product canvas solutions section */}
+            <ProductCanvas />
 
             {/* Practical Transformation Results */}
             <Results />
