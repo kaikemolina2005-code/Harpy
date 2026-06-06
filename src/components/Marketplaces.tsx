@@ -86,7 +86,7 @@ const Marketplaces = ({ onCtaClick }: { onCtaClick?: () => void }) => {
   ];
 
   return (
-    <section className="py-24 bg-neutral-950 relative overflow-hidden z-10" id="marketplaces">
+    <section className="py-24 bg-black relative overflow-hidden z-10" id="marketplaces">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-20">
         <div className="text-center mb-20">
           <h2 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-4">
