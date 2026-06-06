@@ -235,8 +235,8 @@ html.light .bg-neutral-900\/30:not(.stay-dark) {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 10px 40px rgba(0, 0, 0, 0.03) !important;
 }
 
-/* Light mode: fundo preto → branco em todas as seções */
-html.light .bg-black {
+/* Light mode: fundo preto → branco (exceto seções stay-dark que mantêm fundo escuro + texto branco) */
+html.light .bg-black:not(.stay-dark) {
   background-color: #ffffff !important;
   color: #1a1e26 !important;
 }

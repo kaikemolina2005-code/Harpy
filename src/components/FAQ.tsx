@@ -10,7 +10,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-black py-24 px-6 relative border-t border-b border-neutral-900 overflow-hidden" id="faq">
+    <section className="bg-black py-24 px-6 relative border-t border-b border-neutral-900 overflow-hidden stay-dark" id="faq">
       
       <div className="max-w-4xl mx-auto relative z-10">
         
