@@ -190,6 +190,66 @@ const produtos: Produto[] = [
       },
     ],
   },
+  {
+    id: 7,
+    icone: "fa-solid fa-window",
+    titulo: "Landing Pages de Alta Conversão",
+    descricao:
+      "Páginas otimizadas para converter visitantes em clientes com design de alta performance.",
+    incluso: [
+      { texto: "<strong>Pronta em até 48h</strong> de desenvolvimento." },
+      { texto: "<strong>Pixel & CAPI</strong> configurados e rastreados." },
+      { texto: "<strong>Copy de alta conversão</strong> inclusa no pacote." },
+      { texto: "<strong>Checkout sem atrito</strong> integrado nativamente." },
+    ],
+    diferenciais: [
+      {
+        titulo: "Alta Conversão Real",
+        descricao:
+          "Alcançamos 8% a 15% de conversão real — contra os 2%-4% que o marketplace entrega.",
+      },
+      {
+        titulo: "Velocidade e Performance",
+        descricao:
+          "Otimizadas para carregar em qualquer dispositivo sem lentidão, com Core Web Vitals perfeitos.",
+      },
+      {
+        titulo: "Resultados Comprovados",
+        descricao:
+          "Design arquitetado para não ter distrações, focando 100% no clique e na compra do usuário.",
+      },
+    ],
+  },
+  {
+    id: 8,
+    icone: "fa-solid fa-rocket",
+    titulo: "Assessoria Clutch",
+    descricao:
+      "Soberania e independência para e-commerce de performance, sem comissão de plataforma.",
+    incluso: [
+      { texto: "<strong>Loja 100% sua</strong>, sem comissão de plataforma." },
+      { texto: "<strong>Site veloz</strong> em qualquer dispositivo." },
+      { texto: "<strong>Estoque sincronizado</strong> (Bling, Tiny, Shopify)." },
+      { texto: "<strong>Dados e clientes são seus</strong> — independência total." },
+    ],
+    diferenciais: [
+      {
+        titulo: "Margem Cheia",
+        descricao:
+          "Venda direto ao cliente. Zero comissão de plataforma. LTV e recompra 100% seus.",
+      },
+      {
+        titulo: "Independência Estratégica",
+        descricao:
+          "Saia do algoritmo do marketplace e construa relacionamento direto com seus clientes.",
+      },
+      {
+        titulo: "Operação Consolidada",
+        descricao:
+          "Gestão centralizada de inventário, pedidos e relacionamento em uma única plataforma.",
+      },
+    ],
+  },
 ];
 
 export default function ProductCanvas() {
