@@ -246,6 +246,28 @@ html.light section[style*="background"] {
   background-color: #ffffff !important;
 }
 
+/* Input fields e containers com fundo semitransparente preto */
+html.light .bg-black\/30,
+html.light .bg-black\/50,
+html.light .bg-black\/60,
+html.light .bg-black\/80 {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Form cards com gradiente semitransparente branco → aparência clara */
+html.light .from-white\/\[0\.04\],
+html.light .from-white\/\[0\.015\] {
+  background: #f8f9fa !important;
+}
+
+/* Gradientes de preto nos overlays → remover em modo claro */
+html.light .from-black,
+html.light .to-black {
+  --tw-gradient-from: transparent !important;
+  --tw-gradient-to: transparent !important;
+  --tw-gradient-stops: transparent, transparent !important;
+}
+
 /* Accordion hover action items */
 html.light .hover\:bg-white\/\[0\.02\]:hover {
   background-color: rgba(0, 0, 0, 0.02) !important;

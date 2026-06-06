@@ -101,10 +101,7 @@ const ImageComparison = ({ beforeImg, afterImg, beforeLabel = "ANTES", afterLabe
 
 export default function Results() {
   return (
-    <section className="bg-black stay-dark py-24 px-6 relative overflow-hidden text-white w-full">
-      {/* Dark overlay specifically calibrated for rich contrast and text readability */}
-      <div className="absolute inset-0 bg-black z-0 pointer-events-none stay-dark" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black z-0 pointer-events-none stay-dark" />
+    <section className="bg-black py-24 px-6 relative overflow-hidden text-white w-full">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(219,36,41,0.08)_0%,transparent_60%)] pointer-events-none z-0" />
       
       <div className="max-w-7xl mx-auto relative z-10 text-center mb-20">
