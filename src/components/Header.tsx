@@ -106,7 +106,7 @@ export default function Header({
           {/* Nav Menu */}
           <nav className="hidden md:flex items-center gap-1.5 bg-neutral-900/30 rounded-2xl p-1 border border-white/5">
             <button
-              onClick={() => handleMenuClick('solucoes')}
+              onClick={() => handleMenuClick('ecossistema')}
               className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-2 rounded-xl transition-all cursor-pointer"
             >
               Soluções
@@ -185,7 +185,7 @@ export default function Header({
           onClick={() => setMobileMenuOpen(false)}
         >
           <button
-            onClick={() => handleMenuClick('solucoes')}
+            onClick={() => handleMenuClick('ecossistema')}
             className="text-xl font-bold text-white hover:text-brand-red transition-colors cursor-pointer"
           >
             Soluções

@@ -328,7 +328,7 @@ export default function ProductCanvas({ onSaberMais }: ProductCanvasProps) {
 
   return (
     <section
-      id="solucoes"
+      id="ecossistema"
       style={{
         position: "relative",
         height: "100vh",
