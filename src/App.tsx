@@ -21,9 +21,9 @@ export default function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('harpy-theme');
-      return (saved as 'dark' | 'light') || 'dark';
+      return (saved as 'dark' | 'light') || 'light';
     }
-    return 'dark';
+    return 'light';
   });
 
   const diagnosticRef = useRef<HTMLDivElement>(null);
