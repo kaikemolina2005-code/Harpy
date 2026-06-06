@@ -6,16 +6,18 @@ import logoDarkImg from './harpy-logo-dark.png';
 interface HeaderProps {
   onDiagnosticoClick: () => void;
   onAssessoriaClick: () => void;
+  onAssessoriaMarketplaceClick?: () => void;
   currentView?: 'home' | 'landing-page-details' | 'clutch-details';
   onNavigateHome?: (sectionId?: string) => void;
   theme?: 'dark' | 'light';
   onToggleTheme?: () => void;
 }
 
-export default function Header({ 
-  onDiagnosticoClick, 
-  onAssessoriaClick, 
-  currentView = 'home', 
+export default function Header({
+  onDiagnosticoClick,
+  onAssessoriaClick,
+  onAssessoriaMarketplaceClick,
+  currentView = 'home',
   onNavigateHome,
   theme = 'dark',
   onToggleTheme
@@ -124,7 +126,7 @@ export default function Header({
               <LayoutTemplate className="w-4 h-4 text-blue-400" /> Landing Pages
             </button>
             <button
-              onClick={() => handleMenuClick('marketplaces')}
+              onClick={() => { setMobileMenuOpen(false); onAssessoriaMarketplaceClick?.(); }}
               className="text-brand-red hover:text-red-400 hover:bg-brand-red/10 font-extrabold text-sm px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
             >
               <Store className="w-4 h-4 text-brand-red" /> Assessoria Mktplace
@@ -206,7 +208,7 @@ export default function Header({
             <LayoutTemplate className="w-5 h-5 text-blue-400" /> Landing Pages
           </button>
           <button
-            onClick={() => handleMenuClick('marketplaces')}
+            onClick={() => { setMobileMenuOpen(false); onAssessoriaMarketplaceClick?.(); }}
             className="text-xl font-bold text-brand-red hover:text-red-400 transition-colors cursor-pointer flex items-center gap-2"
           >
             <Store className="w-5 h-5 text-brand-red" /> Assessoria Mktplace

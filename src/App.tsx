@@ -153,9 +153,13 @@ export default function App() {
         </div>
 
         {/* Header with pass-down props */}
-        <Header 
+        <Header
           onDiagnosticoClick={() => navigateToHomeAndScroll('diagnostico')}
           onAssessoriaClick={() => navigateToHomeAndScroll('assessoria-clutch-target')}
+          onAssessoriaMarketplaceClick={() => {
+            setCurrentView('assessoria-marketplace');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           currentView={currentView}
           onNavigateHome={navigateToHomeAndScroll}
           theme={theme}
