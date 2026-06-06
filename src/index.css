@@ -246,8 +246,19 @@ html.light .bg-black:not(.stay-dark) {
   color: #1a1e26 !important;
 }
 
+/* Override robusto: todas sections e container principal ficam brancos no light mode */
+html.light section:not(.stay-dark) {
+  background-color: #ffffff !important;
+}
+
+html.light body,
+html.light #root,
+html.light #root > div {
+  background-color: #ffffff !important;
+}
+
 /* Override inline style de fundo preto (ex: ProductCanvas) */
-html.light section[style*="background"] {
+html.light section[style*="background"]:not(.stay-dark) {
   background-color: #ffffff !important;
 }
 
