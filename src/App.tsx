@@ -11,6 +11,7 @@ import LandingProductDetails from './components/LandingProductDetails';
 import ProductDetails from './components/ProductDetails';
 import AssessoriaClutch from './components/AssessoriaClutch';
 import AssessoriaClutchDetails from './components/AssessoriaClutchDetails';
+import AssessoriaMarketplaceDetails from './components/AssessoriaMarketplaceDetails';
 import Testimonials from './components/Testimonials';
 import DiagnosticForm from './components/DiagnosticForm';
 import FAQ from './components/FAQ';
@@ -221,8 +222,14 @@ export default function App() {
             onSelectPlan={handleSelectPlan}
             theme={theme}
           />
-        ) : currentView === 'google-ads' || currentView === 'meta-ads' || currentView === 'ecommerce' || currentView === 'assessoria-marketplace' || currentView === 'consultoria-marketplace' ? (
-          <ProductDetails 
+        ) : currentView === 'assessoria-marketplace' ? (
+          <AssessoriaMarketplaceDetails
+            onBackToHome={() => navigateToHomeAndScroll()}
+            onSelectPlan={handleSelectPlan}
+            theme={theme}
+          />
+        ) : currentView === 'google-ads' || currentView === 'meta-ads' || currentView === 'ecommerce' || currentView === 'consultoria-marketplace' ? (
+          <ProductDetails
             productRoute={currentView}
             onBackToHome={() => navigateToHomeAndScroll()}
           />
