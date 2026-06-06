@@ -168,7 +168,7 @@ const produtos: Produto[] = [
   },
   {
     id: 7,
-    icone: "fa-solid fa-window",
+    icone: "fa-solid fa-window-maximize",
     titulo: "Landing Pages de Alta Conversão",
     descricao:
       "Páginas otimizadas para converter visitantes em clientes com design de alta performance.",
