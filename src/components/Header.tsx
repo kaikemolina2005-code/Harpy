@@ -62,7 +62,7 @@ export default function Header({
         }`}
       >
         <div
-          className="relative max-w-6xl mx-auto rounded-3xl h-18 flex items-center justify-between px-6 text-white cursor-default transition-all duration-700 shadow-2xl overflow-visible"
+          className="relative max-w-6xl mx-auto rounded-2xl flex items-center justify-between px-5 py-2 text-white cursor-default transition-all duration-700 shadow-2xl overflow-visible"
           style={{
             isolation: 'isolate',
           }}
@@ -98,7 +98,7 @@ export default function Header({
             <img 
               src={theme === 'dark' ? logoDarkImg : logoImg} 
               alt="Harpy Assessoria Logo" 
-              className="h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              className="h-10 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
               referrerPolicy="no-referrer"
             />
           </a>
@@ -107,37 +107,37 @@ export default function Header({
           <nav className="hidden md:flex items-center gap-1.5 bg-neutral-900/30 rounded-2xl p-1 border border-white/5">
             <button
               onClick={() => handleMenuClick('ecossistema')}
-              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-2 rounded-xl transition-all cursor-pointer"
+              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap"
             >
               Soluções
             </button>
             <button
               onClick={onAssessoriaClick}
-              className="text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 font-extrabold text-sm px-3.5 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
+              className="text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10 font-extrabold text-sm px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
             >
               <Wind className="w-4 h-4 text-emerald-400" /> Assessoria Global
             </button>
             <button
               onClick={() => handleMenuClick('landing-pages')}
-              className="text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 font-extrabold text-sm px-3.5 py-2 rounded-xl transition-all cursor-pointer flex items-center gap-1.5"
+              className="text-blue-400 hover:text-blue-300 hover:bg-blue-500/10 font-extrabold text-sm px-3.5 py-1.5 rounded-xl transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
             >
               <LayoutTemplate className="w-4 h-4 text-blue-400" /> Landing Pages
             </button>
             <button
               onClick={() => handleMenuClick('marketplaces')}
-              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-2 rounded-xl transition-all cursor-pointer"
+              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap"
             >
               Assessoria Mktplace
             </button>
             <button
               onClick={() => handleMenuClick('cases')}
-              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-2 rounded-xl transition-all cursor-pointer"
+              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap"
             >
               Cases
             </button>
             <button
               onClick={() => handleMenuClick('faq')}
-              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-2 rounded-xl transition-all cursor-pointer"
+              className="text-neutral-300 hover:text-white hover:bg-white/5 font-extrabold text-sm px-4 py-1.5 rounded-xl transition-all cursor-pointer whitespace-nowrap"
             >
               FAQ
             </button>
