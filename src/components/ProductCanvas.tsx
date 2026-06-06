@@ -9,6 +9,11 @@ interface Produto {
   descricao: string;
   incluso?: { texto: string }[];
   diferenciais: { titulo: string; descricao: string }[];
+  rota?: string;
+}
+
+interface ProductCanvasProps {
+  onSaberMais?: (rota: string) => void;
 }
 
 const produtos: Produto[] = [
@@ -18,6 +23,7 @@ const produtos: Produto[] = [
     titulo: "Google Ads",
     descricao:
       "O pacote completo para dominar as buscas locais e aumentar a conversão da sua empresa.",
+    rota: "google-ads",
     incluso: [
       { texto: "<strong>Criação de Landing Page</strong> de alta conversão." },
       { texto: "<strong>Gestão de Google Ads</strong> completa." },
@@ -44,6 +50,7 @@ const produtos: Produto[] = [
     titulo: "Meta Ads",
     descricao:
       "Estratégias de alto impacto no Facebook e Instagram para atrair e converter seu público-alvo.",
+    rota: "meta-ads",
     incluso: [
       { texto: "<strong>Produção</strong> de 10 Criativos." },
       { texto: "<strong>Gestão completa</strong> do Meta Ads." },
@@ -74,6 +81,7 @@ const produtos: Produto[] = [
     titulo: "E-commerce",
     descricao:
       "Lojas virtuais modernas, muito rápidas e totalmente otimizadas para escalar suas vendas online.",
+    rota: "ecommerce",
     incluso: [
       { texto: "<strong>Criação de E-commerce</strong> de alta conversão." },
       { texto: "<strong>Gestão completa</strong> do Google Ads." },
@@ -109,6 +117,7 @@ const produtos: Produto[] = [
     titulo: "Assessoria Mktplace",
     descricao:
       "Operação técnica focada em ranquear seus produtos e escalar suas vendas nos principais canais.",
+    rota: "assessoria-marketplace",
     incluso: [
       { texto: "<strong>Criação e Gestão</strong> de Product Ads." },
       { texto: "<strong>Otimização de anúncios</strong> (+20 imagens por mês)." },
@@ -138,6 +147,7 @@ const produtos: Produto[] = [
     titulo: "Consultoria Mktplace",
     descricao:
       "Inteligência e direcionamento estratégico para o seu time interno saber exatamente o que executar.",
+    rota: "consultoria-marketplace",
     diferenciais: [
       {
         titulo: "Plano Acessível",
@@ -162,6 +172,7 @@ const produtos: Produto[] = [
     titulo: "Landing Pages de Alta Conversão",
     descricao:
       "Páginas otimizadas para converter visitantes em clientes com design de alta performance.",
+    rota: "landing-pages",
     incluso: [
       { texto: "<strong>Pronta em até 48h</strong> de desenvolvimento." },
       { texto: "<strong>Pixel & CAPI</strong> configurados e rastreados." },
@@ -192,6 +203,7 @@ const produtos: Produto[] = [
     titulo: "Assessoria Clutch",
     descricao:
       "Soberania e independência para e-commerce de performance, sem comissão de plataforma.",
+    rota: "assessoria-clutch",
     incluso: [
       { texto: "<strong>Loja 100% sua</strong>, sem comissão de plataforma." },
       { texto: "<strong>Site veloz</strong> em qualquer dispositivo." },
@@ -218,7 +230,7 @@ const produtos: Produto[] = [
   },
 ];
 
-export default function ProductCanvas() {
+export default function ProductCanvas({ onSaberMais }: ProductCanvasProps) {
   const [expandidoId, setExpandidoId] = useState<number | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const arrastando = useRef(false);
@@ -764,6 +776,42 @@ export default function ProductCanvas() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Botão Saber Mais */}
+                  {produto.rota && onSaberMais && (
+                    <button
+                      onClick={() => onSaberMais(produto.rota!)}
+                      style={{
+                        marginTop: 25,
+                        padding: "12px 24px",
+                        background: "#e63946",
+                        color: "#ffffff",
+                        border: "none",
+                        borderRadius: 12,
+                        fontSize: "1rem",
+                        fontWeight: 600,
+                        cursor: "pointer",
+                        transition: "background 0.3s ease, transform 0.2s ease",
+                        textTransform: "uppercase",
+                        letterSpacing: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 8,
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.target as HTMLButtonElement).style.background = "#c41c1f";
+                        (e.target as HTMLButtonElement).style.transform = "scale(1.05)";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.target as HTMLButtonElement).style.background = "#e63946";
+                        (e.target as HTMLButtonElement).style.transform = "scale(1)";
+                      }}
+                    >
+                      Saber Mais
+                      <i className="fa-solid fa-arrow-right" />
+                    </button>
+                  )}
                 </div>
               </article>
             );

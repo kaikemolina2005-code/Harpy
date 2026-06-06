@@ -8,6 +8,7 @@ import Results from './components/Results';
 import ProductCanvas from './components/ProductCanvas';
 import LandingPages from './components/LandingPages';
 import LandingProductDetails from './components/LandingProductDetails';
+import ProductDetails from './components/ProductDetails';
 import AssessoriaClutch from './components/AssessoriaClutch';
 import AssessoriaClutchDetails from './components/AssessoriaClutchDetails';
 import Testimonials from './components/Testimonials';
@@ -16,7 +17,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'landing-page-details' | 'clutch-details'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'landing-page-details' | 'clutch-details' | 'google-ads' | 'meta-ads' | 'ecommerce' | 'assessoria-marketplace' | 'consultoria-marketplace'>('home');
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('harpy-theme');
@@ -172,7 +173,10 @@ export default function App() {
             <Marketplaces onCtaClick={() => scrollToSection('diagnostico')} />
             
             {/* Product canvas solutions section */}
-            <ProductCanvas />
+            <ProductCanvas onSaberMais={(rota) => {
+              setCurrentView(rota as any);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} />
 
             {/* Practical Transformation Results */}
             <Results />
@@ -207,6 +211,17 @@ export default function App() {
             onBackToHome={() => navigateToHomeAndScroll()}
             onSelectPlan={handleSelectPlan}
             theme={theme}
+          />
+        ) : currentView === 'clutch-details' ? (
+          <AssessoriaClutchDetails 
+            onBackToHome={() => navigateToHomeAndScroll()}
+            onSelectPlan={handleSelectPlan}
+            theme={theme}
+          />
+        ) : currentView === 'google-ads' || currentView === 'meta-ads' || currentView === 'ecommerce' || currentView === 'assessoria-marketplace' || currentView === 'consultoria-marketplace' ? (
+          <ProductDetails 
+            productRoute={currentView}
+            onBackToHome={() => navigateToHomeAndScroll()}
           />
         ) : (
           <AssessoriaClutchDetails 
