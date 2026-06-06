@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 interface Produto {
   id: number;
   icone: string;
+  icone2?: string;
   titulo: string;
   descricao: string;
   incluso?: { texto: string }[];
@@ -20,40 +21,17 @@ const produtos: Produto[] = [
   {
     id: 1,
     icone: "fa-brands fa-google",
-    titulo: "Google Ads",
+    icone2: "fa-brands fa-meta",
+    titulo: "Gestão de Ads",
     descricao:
-      "O pacote completo para dominar as buscas locais e aumentar a conversão da sua empresa.",
+      "Campanhas de alto impacto no Google e Meta para dominar buscas, atrair e converter seu público-alvo.",
     rota: "google-ads",
     incluso: [
-      { texto: "<strong>Criação de Landing Page</strong> de alta conversão." },
-      { texto: "<strong>Gestão de Google Ads</strong> completa." },
-      { texto: "<strong>Google Meu Negócio</strong> gestão otimizada." },
-      { texto: "<strong>Duas reuniões</strong> por mês." },
-      { texto: "<strong>Atendimento</strong> via WhatsApp." },
-    ],
-    diferenciais: [
-      {
-        titulo: "Alta Conversão",
-        descricao:
-          "Design arquitetado para não ter distrações, focando 100% no clique e na compra do usuário.",
-      },
-      {
-        titulo: "Modernidade",
-        descricao:
-          "Estética visual de alto padrão que gera confiança imediata no seu potencial cliente.",
-      },
-    ],
-  },
-  {
-    id: 2,
-    icone: "fa-brands fa-meta",
-    titulo: "Meta Ads",
-    descricao:
-      "Estratégias de alto impacto no Facebook e Instagram para atrair e converter seu público-alvo.",
-    rota: "meta-ads",
-    incluso: [
-      { texto: "<strong>Produção</strong> de 10 Criativos." },
+      { texto: "<strong>Gestão completa</strong> de Google Ads." },
+      { texto: "<strong>Google Meu Negócio</strong> otimizado." },
       { texto: "<strong>Gestão completa</strong> do Meta Ads." },
+      { texto: "<strong>Produção</strong> de 10 Criativos/mês." },
+      { texto: "<strong>Criação de Landing Page</strong> de alta conversão." },
       { texto: "<strong>Duas reuniões</strong> por mês." },
       { texto: "<strong>Atendimento</strong> via WhatsApp." },
     ],
@@ -61,17 +39,17 @@ const produtos: Produto[] = [
       {
         titulo: "Segmentação Precisa",
         descricao:
-          "Alcançamos exatamente o perfil de cliente que tem potencial de compra.",
+          "Alcançamos exatamente o perfil de cliente que tem potencial de compra, no canal certo.",
       },
       {
         titulo: "Retargeting Avançado",
         descricao:
-          "Campanhas para perseguir e converter quem já visitou ou engajou com seu perfil.",
+          "Campanhas para converter quem já visitou ou engajou com seu perfil no Google e Instagram.",
       },
       {
         titulo: "Otimização de ROI",
         descricao:
-          "Acompanhamento constante para reduzir o custo por clique e maximizar seu retorno.",
+          "Acompanhamento constante para reduzir custo por clique e maximizar seu retorno nos dois canais.",
       },
     ],
   },
@@ -549,23 +527,44 @@ export default function ProductCanvas({ onSaberMais }: ProductCanvasProps) {
                     zIndex: 1,
                   }}
                 >
-                  {/* Ícone */}
-                  <div
-                    style={{
-                      width: 70,
-                      height: 70,
-                      background: "rgba(230,57,70,0.1)",
-                      borderRadius: 16,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginBottom: 30,
-                      color: "#e63946",
-                      fontSize: "2rem",
-                      border: "1px solid rgba(230,57,70,0.2)",
-                    }}
-                  >
-                    <i className={produto.icone} />
+                  {/* Ícone(s) */}
+                  <div style={{ display: "flex", gap: 12, marginBottom: 30 }}>
+                    <div
+                      style={{
+                        width: 70,
+                        height: 70,
+                        background: "rgba(230,57,70,0.1)",
+                        borderRadius: 16,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: "#e63946",
+                        fontSize: "2rem",
+                        border: "1px solid rgba(230,57,70,0.2)",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <i className={produto.icone} />
+                    </div>
+                    {produto.icone2 && (
+                      <div
+                        style={{
+                          width: 70,
+                          height: 70,
+                          background: "rgba(230,57,70,0.1)",
+                          borderRadius: 16,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: "#e63946",
+                          fontSize: "2rem",
+                          border: "1px solid rgba(230,57,70,0.2)",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <i className={produto.icone2} />
+                      </div>
+                    )}
                   </div>
 
                   <h2
