@@ -284,6 +284,16 @@ html.light .to-black {
   --tw-gradient-stops: transparent, transparent !important;
 }
 
+/* Exceção: preservar gradientes preto dentro de seções stay-dark */
+html.light .stay-dark .from-black {
+  --tw-gradient-from: #000000 !important;
+  --tw-gradient-stops: #000000, transparent !important;
+}
+html.light .stay-dark .to-black {
+  --tw-gradient-to: #000000 !important;
+  --tw-gradient-stops: transparent, #000000 !important;
+}
+
 /* Accordion hover action items */
 html.light .hover\:bg-white\/\[0\.02\]:hover {
   background-color: rgba(0, 0, 0, 0.02) !important;
