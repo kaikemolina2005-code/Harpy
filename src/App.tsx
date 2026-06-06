@@ -6,10 +6,8 @@ import Scaling from './components/Scaling';
 import Marketplaces from './components/Marketplaces';
 import Results from './components/Results';
 import ProductCanvas from './components/ProductCanvas';
-import LandingPages from './components/LandingPages';
 import LandingProductDetails from './components/LandingProductDetails';
 import ProductDetails from './components/ProductDetails';
-import AssessoriaClutch from './components/AssessoriaClutch';
 import AssessoriaClutchDetails from './components/AssessoriaClutchDetails';
 import AssessoriaMarketplaceDetails from './components/AssessoriaMarketplaceDetails';
 import Testimonials from './components/Testimonials';
@@ -188,20 +186,6 @@ export default function App() {
 
             {/* Practical Transformation Results */}
             <Results />
-
-            {/* Landing pages of high conversion */}
-            <LandingPages 
-              onCtaClick={() => scrollToSection('diagnostico')} 
-              onLearnMoreClick={() => setCurrentView('landing-page-details')}
-            />
-
-            {/* Assessoria Clutch independent e-commerce solution */}
-            <div id="assessoria-clutch-target" ref={assessoriaRef}>
-              <AssessoriaClutch 
-                onCtaClick={() => scrollToSection('diagnostico')} 
-                onLearnMoreClick={() => setCurrentView('clutch-details')}
-              />
-            </div>
 
             {/* Testimonials moving 3D lane marquee */}
             <Testimonials onCtaClick={() => scrollToSection('diagnostico')} />
