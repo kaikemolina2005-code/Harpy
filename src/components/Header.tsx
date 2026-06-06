@@ -98,7 +98,7 @@ export default function Header({
             <img 
               src={theme === 'dark' ? logoDarkImg : logoImg} 
               alt="Harpy Assessoria Logo" 
-              className="h-10 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              className="h-14 w-auto object-contain group-hover:scale-110 transition-transform duration-300"
               referrerPolicy="no-referrer"
             />
           </a>
