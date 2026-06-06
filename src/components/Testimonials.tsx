@@ -46,7 +46,7 @@ export default function Testimonials({ onCtaClick }: TestimonialsProps) {
   );
 
   return (
-    <section className="bg-black py-24 relative overflow-hidden text-white" id="cases">
+    <section className="bg-black py-24 relative overflow-hidden text-white stay-dark" id="cases">
       
       {/* Soft light leaks */}
       <div className="absolute top-1/4 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl z-0 pointer-events-none" />
@@ -199,8 +199,8 @@ export default function Testimonials({ onCtaClick }: TestimonialsProps) {
         </div>
 
         {/* Gradients to fade away boundaries smoothly */}
-        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-neutral-950 to-transparent pointer-events-none z-30 testimonial-gradient-top" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-neutral-950 to-transparent pointer-events-none z-30 testimonial-gradient-bottom" />
+        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black to-transparent pointer-events-none z-30 testimonial-gradient-top" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black to-transparent pointer-events-none z-30 testimonial-gradient-bottom" />
 
       </div>
 
