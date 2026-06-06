@@ -15,6 +15,7 @@ import Testimonials from './components/Testimonials';
 import DiagnosticForm from './components/DiagnosticForm';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import GlobalBackground from './components/GlobalBackground';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'landing-page-details' | 'clutch-details' | 'google-ads' | 'meta-ads' | 'ecommerce' | 'assessoria-marketplace' | 'consultoria-marketplace'>('home');
@@ -69,10 +70,12 @@ export default function App() {
   };
 
   return (
-    <div className="bg-neutral-950 font-sans min-h-screen text-white select-none">
+    <div className="bg-neutral-950 font-sans min-h-screen text-white select-none relative">
+      {/* Global Background Blobs */}
+      <GlobalBackground />
       
       {/* Scrollable Main Content wrapper with rounded bottom base for the reveal effect */}
-      <div className="relative z-10 bg-neutral-950 pb-0 rounded-b-none shadow-none overflow-hidden">
+      <div className="relative z-10 bg-neutral-950/90 pb-0 rounded-b-none shadow-none overflow-hidden">
         
         {/* Ambient background decoration spread across the entire length of the page */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
