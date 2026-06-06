@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ onCtaClick }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-start pt-24 pb-12 overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-start pt-24 pb-12 overflow-hidden bg-black stay-dark">
       
       {/* Background Graphic & Premium Custom Image */}
       <div 
