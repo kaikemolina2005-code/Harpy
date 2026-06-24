@@ -5,7 +5,8 @@ import {
   User,
   Mail,
   Phone,
-  Send
+  Send,
+  AlertTriangle
 } from 'lucide-react';
 
 interface ScalingProps {
@@ -18,13 +19,13 @@ export default function Scaling({ onDiagnosticoClick }: ScalingProps) {
     email: '',
     telefone: ''
   });
+  const [error, setError] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    alert('Informações enviadas com sucesso! Um especialista entrará em contato.');
-    setFormData({ nome: '', email: '', telefone: '' });
+    // O envio ainda não está integrado a um backend.
+    // Por enquanto, exibimos uma tela de erro para o usuário.
+    setError(true);
   };
 
   return (
@@ -82,6 +83,26 @@ export default function Scaling({ onDiagnosticoClick }: ScalingProps) {
             
             <div className="absolute top-0 right-0 w-80 h-80 bg-brand-blue/5 rounded-full filter blur-[80px] pointer-events-none -translate-y-12 translate-x-12" />
 
+            {error ? (
+              <div className="relative z-10 flex flex-col items-center text-center py-10 px-2">
+                <div className="w-16 h-16 rounded-full bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red mb-6">
+                  <AlertTriangle className="w-8 h-8" />
+                </div>
+                <h3 className="font-display font-black text-2xl text-neutral-900 tracking-tight mb-2">
+                  Não foi possível enviar
+                </h3>
+                <p className="text-neutral-500 text-sm max-w-sm leading-relaxed mb-6">
+                  Ocorreu um erro ao processar a sua solicitação e ela não pôde ser enviada no momento. Por favor, tente novamente mais tarde ou fale diretamente com a nossa equipe pelo WhatsApp.
+                </p>
+                <button
+                  onClick={() => setError(false)}
+                  className="bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 text-neutral-800 font-black text-xs tracking-widest uppercase px-6 py-3 rounded-full cursor-pointer transition-colors"
+                >
+                  Tentar novamente
+                </button>
+              </div>
+            ) : (
+            <>
             <div className="relative z-10 mb-8">
               <h3 className="font-display font-black text-2xl text-neutral-900 tracking-tight mb-2">
                 Falar com um Especialista
@@ -164,6 +185,8 @@ export default function Scaling({ onDiagnosticoClick }: ScalingProps) {
                 </button>
               </div>
             </form>
+            </>
+            )}
 
           </div>
         </div>
