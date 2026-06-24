@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, User, Building2, Phone, Mail, Check, ShieldCheck, RefreshCw } from 'lucide-react';
+import { Sparkles, User, Building2, Phone, Mail, Check, RefreshCw, AlertTriangle } from 'lucide-react';
 
 export default function DiagnosticForm() {
   const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
@@ -10,7 +10,7 @@ export default function DiagnosticForm() {
   const [plan, setPlan] = useState('');
   const [challenge, setChallenge] = useState('');
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const toggleChannel = (channel: string) => {
     if (selectedChannels.includes(channel)) {
@@ -23,11 +23,12 @@ export default function DiagnosticForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate API submission
+
+    // O envio ainda não está integrado a um backend.
+    // Por enquanto, exibimos uma tela de erro para o usuário.
     setTimeout(() => {
       setLoading(false);
-      setSuccess(true);
+      setError(true);
     }, 1500);
   };
 
@@ -106,20 +107,20 @@ export default function DiagnosticForm() {
               <p className="text-neutral-500 text-xs font-bold uppercase tracking-wider">Insira suas informações de vendas</p>
             </div>
 
-            {success ? (
+            {error ? (
               <div className="flex flex-col items-center text-center py-12 px-4 animate-scale-up">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-6">
-                  <ShieldCheck className="w-8 h-8" />
+                <div className="w-16 h-16 rounded-full bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red text-2xl mb-6">
+                  <AlertTriangle className="w-8 h-8" />
                 </div>
-                <h4 className="font-extrabold text-lg text-white mb-2 uppercase tracking-wide">Plano de Diagnóstico Solicitado!</h4>
+                <h4 className="font-extrabold text-lg text-white mb-2 uppercase tracking-wide">Não foi possível enviar</h4>
                 <p className="text-neutral-400 text-sm max-w-sm leading-relaxed mb-6">
-                  Obrigado pelo envio. Nossa diretoria técnica já está analisando o seu catálogo. Entraremos em contato via WhatsApp nas próximas horas.
+                  Ocorreu um erro ao processar a sua solicitação e ela não pôde ser enviada no momento. Por favor, tente novamente mais tarde ou fale diretamente com a nossa equipe pelo WhatsApp.
                 </p>
-                <button 
-                  onClick={() => setSuccess(false)}
+                <button
+                  onClick={() => setError(false)}
                   className="bg-white/5 hover:bg-white/10 border border-white/10 text-white font-black text-xxs tracking-widest uppercase px-6 py-3 rounded-full cursor-pointer transition-colors"
                 >
-                  Fazer outra solicitação
+                  Tentar novamente
                 </button>
               </div>
             ) : (
