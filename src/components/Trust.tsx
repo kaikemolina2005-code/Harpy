@@ -5,7 +5,7 @@ export default function Trust() {
   const [videoOpen, setVideoOpen] = useState(false);
 
   return (
-    <section className="bg-black py-20 px-6 overflow-visible relative">
+    <section className="bg-black pt-36 pb-20 px-6 overflow-visible relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-red/5 rounded-full blur-3xl z-0 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto">

@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
 import Trust from './components/Trust';
 import Scaling from './components/Scaling';
 import Marketplaces from './components/Marketplaces';
@@ -166,9 +165,6 @@ export default function App() {
 
         {currentView === 'home' ? (
           <>
-            {/* Hero Banner copy linking directly to form anchor */}
-            <Hero onCtaClick={() => scrollToSection('diagnostico')} />
-
             {/* Trust Proofing & Media Section */}
             <Trust />
 
